@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PlusJakartaSans-ExtraBold.ttf">
+            <string>PlusJakartaSans-ExtraBold</string>
+        </array>
+        <array key="PlusJakartaSans-Regular.ttf">
+            <string>PlusJakartaSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EarningsCollectionViewCell" id="gTV-IL-0wX" customClass="EarningsCollectionViewCell" customModule="HustleChaser" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="176" height="269"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="176" height="269"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nuf-Yp-u6B">
+                        <rect key="frame" x="0.0" y="0.0" width="176" height="269"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-wu-z2S">
+                                <rect key="frame" x="68" y="15" width="40" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spt-2D-MQ3">
+                                        <rect key="frame" x="14.666666666666671" y="7.3333333333333357" width="11" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="DCB-gi-dJy"/>
+                                    <constraint firstItem="spt-2D-MQ3" firstAttribute="centerX" secondItem="DOv-wu-z2S" secondAttribute="centerX" id="Hhi-Rn-mlW"/>
+                                    <constraint firstAttribute="width" secondItem="DOv-wu-z2S" secondAttribute="height" multiplier="1:1" id="MJ7-Be-r4c"/>
+                                    <constraint firstItem="spt-2D-MQ3" firstAttribute="centerY" secondItem="DOv-wu-z2S" secondAttribute="centerY" id="tGB-xj-jg4"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,500,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9H-im-mZw">
+                                <rect key="frame" x="42.999999999999993" y="237.33333333333334" width="90.333333333333314" height="21.666666666666657"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upwork" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qr1-we-xFn">
+                                <rect key="frame" x="60.333333333333329" y="213.33333333333334" width="55.333333333333329" height="19"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="red"/>
+                        <constraints>
+                            <constraint firstItem="DOv-wu-z2S" firstAttribute="top" secondItem="Nuf-Yp-u6B" secondAttribute="top" constant="15" id="0oH-aQ-no3"/>
+                            <constraint firstItem="d9H-im-mZw" firstAttribute="top" secondItem="qr1-we-xFn" secondAttribute="bottom" constant="5" id="3Kl-N1-Pl5"/>
+                            <constraint firstItem="d9H-im-mZw" firstAttribute="centerX" secondItem="Nuf-Yp-u6B" secondAttribute="centerX" id="7ve-pQ-bIX"/>
+                            <constraint firstItem="DOv-wu-z2S" firstAttribute="centerX" secondItem="Nuf-Yp-u6B" secondAttribute="centerX" id="G8P-es-l2f"/>
+                            <constraint firstAttribute="bottom" secondItem="d9H-im-mZw" secondAttribute="bottom" constant="10" id="K6i-vh-WCa"/>
+                            <constraint firstItem="qr1-we-xFn" firstAttribute="centerX" secondItem="Nuf-Yp-u6B" secondAttribute="centerX" id="m9B-Jk-e6U"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Nuf-Yp-u6B" secondAttribute="bottom" id="Iih-Hb-BoD"/>
+                <constraint firstItem="Nuf-Yp-u6B" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Mcd-A8-FiT"/>
+                <constraint firstAttribute="trailing" secondItem="Nuf-Yp-u6B" secondAttribute="trailing" id="fJg-jK-7mw"/>
+                <constraint firstItem="Nuf-Yp-u6B" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iya-F0-oyk"/>
+            </constraints>
+            <size key="customSize" width="176" height="269"/>
+            <connections>
+                <outlet property="earningsView" destination="Nuf-Yp-u6B" id="Gvd-TE-09q"/>
+                <outlet property="symbolView" destination="DOv-wu-z2S" id="c8R-Sj-SOR"/>
+            </connections>
+            <point key="canvasLocation" x="224.42748091603053" y="65.140845070422543"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="red">
+            <color red="0.8784313725490196" green="0.32549019607843138" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

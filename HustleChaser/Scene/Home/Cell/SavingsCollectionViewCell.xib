@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PlusJakartaSans-Bold.ttf">
+            <string>PlusJakartaSans-Bold</string>
+        </array>
+        <array key="PlusJakartaSans-Regular.ttf">
+            <string>PlusJakartaSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SavingsCollectionViewCell" id="gTV-IL-0wX" customClass="SavingsCollectionViewCell" customModule="HustleChaser" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="139"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="139"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhc-Zn-yfw">
+                        <rect key="frame" x="0.0" y="0.0" width="334" height="139"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iphone 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69L-tE-q8x">
+                                <rect key="frame" x="10" y="10" width="67.666666666666671" height="19"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="15"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20,000,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhe-Kk-XBg">
+                                <rect key="frame" x="10" y="39" width="106.66666666666667" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tlL-gY-CMM">
+                                <rect key="frame" x="294" y="11.999999999999998" width="30" height="26.333333333333329"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tlL-gY-CMM" secondAttribute="height" multiplier="1:1" id="ZfK-qD-AmR"/>
+                                    <constraint firstAttribute="height" constant="30" id="cl2-w3-ca0"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6M4-Hq-Hgg">
+                                <rect key="frame" x="10" y="121" width="314" height="8"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="Tbt-CC-Koy"/>
+                                </constraints>
+                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6M4-Hq-Hgg" secondAttribute="trailing" constant="10" id="Hg6-mL-aNn"/>
+                            <constraint firstItem="6M4-Hq-Hgg" firstAttribute="leading" secondItem="Yhc-Zn-yfw" secondAttribute="leading" constant="10" id="IAe-YR-SEg"/>
+                            <constraint firstAttribute="bottom" secondItem="6M4-Hq-Hgg" secondAttribute="bottom" constant="10" id="KQm-ha-dRZ"/>
+                            <constraint firstItem="Rhe-Kk-XBg" firstAttribute="leading" secondItem="Yhc-Zn-yfw" secondAttribute="leading" constant="10" id="NuG-bq-Fns"/>
+                            <constraint firstItem="Rhe-Kk-XBg" firstAttribute="top" secondItem="69L-tE-q8x" secondAttribute="bottom" constant="10" id="UKb-cf-BZc"/>
+                            <constraint firstAttribute="trailing" secondItem="tlL-gY-CMM" secondAttribute="trailing" constant="10" id="WjX-z4-Ls7"/>
+                            <constraint firstItem="69L-tE-q8x" firstAttribute="leading" secondItem="Yhc-Zn-yfw" secondAttribute="leading" constant="10" id="fxg-bF-Ysy"/>
+                            <constraint firstItem="tlL-gY-CMM" firstAttribute="top" secondItem="Yhc-Zn-yfw" secondAttribute="top" constant="10" id="vGf-ti-D5a"/>
+                            <constraint firstItem="69L-tE-q8x" firstAttribute="top" secondItem="Yhc-Zn-yfw" secondAttribute="top" constant="10" id="yqi-w9-yzR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Yhc-Zn-yfw" secondAttribute="bottom" id="4Ts-FD-Mhr"/>
+                <constraint firstItem="Yhc-Zn-yfw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7PX-p5-5ge"/>
+                <constraint firstAttribute="trailing" secondItem="Yhc-Zn-yfw" secondAttribute="trailing" id="dLO-0d-vWO"/>
+                <constraint firstItem="Yhc-Zn-yfw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nQv-63-PLE"/>
+            </constraints>
+            <size key="customSize" width="334" height="139"/>
+            <connections>
+                <outlet property="progressView" destination="6M4-Hq-Hgg" id="2Z4-9T-v2E"/>
+                <outlet property="savingsView" destination="Yhc-Zn-yfw" id="Wrw-be-saP"/>
+            </connections>
+            <point key="canvasLocation" x="346.56488549618319" y="20.070422535211268"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+    </resources>
+</document>

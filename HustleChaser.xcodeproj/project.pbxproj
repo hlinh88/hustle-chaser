@@ -7,25 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E74F7C52AE0EB7F005AF7CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74F7C32AE0EB7F005AF7CB /* HomeViewController.swift */; };
+		5E74F7C62AE0EB7F005AF7CB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E74F7C42AE0EB7F005AF7CB /* HomeViewController.xib */; };
+		5E74F7C92AE12B42005AF7CB /* EarningsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74F7C72AE12B42005AF7CB /* EarningsCollectionViewCell.swift */; };
+		5E74F7CA2AE12B42005AF7CB /* EarningsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E74F7C82AE12B42005AF7CB /* EarningsCollectionViewCell.xib */; };
+		5E74F7CD2AE1320C005AF7CB /* SavingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74F7CB2AE1320C005AF7CB /* SavingsCollectionViewCell.swift */; };
+		5E74F7CE2AE1320C005AF7CB /* SavingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E74F7CC2AE1320C005AF7CB /* SavingsCollectionViewCell.xib */; };
+		5E74F7D02AE234A1005AF7CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74F7CF2AE234A1005AF7CB /* Constants.swift */; };
+		5E74F7D32AE23582005AF7CB /* TransactionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74F7D12AE23582005AF7CB /* TransactionsTableViewCell.swift */; };
+		5E74F7D42AE23582005AF7CB /* TransactionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E74F7D22AE23582005AF7CB /* TransactionsTableViewCell.xib */; };
+		5E74F7D92AE776AE005AF7CB /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74F7D82AE776AE005AF7CB /* Array+.swift */; };
 		5EB15EF62AC1218700E9D871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB15EF52AC1218700E9D871 /* AppDelegate.swift */; };
-		5EB15EF82AC1218700E9D871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB15EF72AC1218700E9D871 /* SceneDelegate.swift */; };
-		5EB15EFA2AC1218700E9D871 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB15EF92AC1218700E9D871 /* ViewController.swift */; };
 		5EB15EFD2AC1218700E9D871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15EFB2AC1218700E9D871 /* Main.storyboard */; };
 		5EB15F002AC1218700E9D871 /* HustleChaser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EB15EFE2AC1218700E9D871 /* HustleChaser.xcdatamodeld */; };
 		5EB15F022AC1218900E9D871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F012AC1218900E9D871 /* Assets.xcassets */; };
 		5EB15F052AC1218900E9D871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F032AC1218900E9D871 /* LaunchScreen.storyboard */; };
+		5EB15F102AC1384C00E9D871 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB15F0F2AC1384C00E9D871 /* ImageViewExtension.swift */; };
+		5EB15F222AC139F500E9D871 /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F142AC139F400E9D871 /* PlusJakartaSans-ExtraBold.ttf */; };
+		5EB15F232AC139F500E9D871 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F152AC139F400E9D871 /* PlusJakartaSans-ExtraBoldItalic.ttf */; };
+		5EB15F242AC139F500E9D871 /* PlusJakartaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F162AC139F400E9D871 /* PlusJakartaSans-Light.ttf */; };
+		5EB15F252AC139F500E9D871 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F172AC139F400E9D871 /* PlusJakartaSans-SemiBold.ttf */; };
+		5EB15F262AC139F500E9D871 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F182AC139F400E9D871 /* PlusJakartaSans-Regular.ttf */; };
+		5EB15F272AC139F500E9D871 /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F192AC139F400E9D871 /* PlusJakartaSans-Medium.ttf */; };
+		5EB15F282AC139F500E9D871 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F1A2AC139F400E9D871 /* PlusJakartaSans-SemiBoldItalic.ttf */; };
+		5EB15F292AC139F500E9D871 /* PlusJakartaSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F1B2AC139F400E9D871 /* PlusJakartaSans-MediumItalic.ttf */; };
+		5EB15F2A2AC139F500E9D871 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F1C2AC139F400E9D871 /* PlusJakartaSans-Bold.ttf */; };
+		5EB15F2B2AC139F500E9D871 /* PlusJakartaSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F1D2AC139F400E9D871 /* PlusJakartaSans-BoldItalic.ttf */; };
+		5EB15F2C2AC139F500E9D871 /* PlusJakartaSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F1E2AC139F400E9D871 /* PlusJakartaSans-ExtraLightItalic.ttf */; };
+		5EB15F2D2AC139F500E9D871 /* PlusJakartaSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F1F2AC139F400E9D871 /* PlusJakartaSans-LightItalic.ttf */; };
+		5EB15F2E2AC139F500E9D871 /* PlusJakartaSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F202AC139F400E9D871 /* PlusJakartaSans-Italic.ttf */; };
+		5EB15F2F2AC139F500E9D871 /* PlusJakartaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F212AC139F500E9D871 /* PlusJakartaSans-ExtraLight.ttf */; };
+		5EB15F312AC13B4800E9D871 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB15F302AC13B4800E9D871 /* ColorExtension.swift */; };
+		5EB15F342AC13CF400E9D871 /* LayerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB15F332AC13CF400E9D871 /* LayerSettings.swift */; };
+		5EB15F362AC17B3800E9D871 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB15F352AC17B3800E9D871 /* ViewExtension.swift */; };
+		99F24233C5B94769DB1FDFB6 /* Pods_HustleChaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7611B81927BADD84976A5914 /* Pods_HustleChaser.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E74F7C32AE0EB7F005AF7CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5E74F7C42AE0EB7F005AF7CB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		5E74F7C72AE12B42005AF7CB /* EarningsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E74F7C82AE12B42005AF7CB /* EarningsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EarningsCollectionViewCell.xib; sourceTree = "<group>"; };
+		5E74F7CB2AE1320C005AF7CB /* SavingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E74F7CC2AE1320C005AF7CB /* SavingsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavingsCollectionViewCell.xib; sourceTree = "<group>"; };
+		5E74F7CF2AE234A1005AF7CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5E74F7D12AE23582005AF7CB /* TransactionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewCell.swift; sourceTree = "<group>"; };
+		5E74F7D22AE23582005AF7CB /* TransactionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsTableViewCell.xib; sourceTree = "<group>"; };
+		5E74F7D82AE776AE005AF7CB /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		5EB15EF22AC1218700E9D871 /* HustleChaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HustleChaser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB15EF52AC1218700E9D871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EB15EF72AC1218700E9D871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EB15EF92AC1218700E9D871 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5EB15EFC2AC1218700E9D871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EB15EFF2AC1218700E9D871 /* HustleChaser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HustleChaser.xcdatamodel; sourceTree = "<group>"; };
 		5EB15F012AC1218900E9D871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB15F042AC1218900E9D871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EB15F062AC1218900E9D871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EB15F0F2AC1384C00E9D871 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		5EB15F142AC139F400E9D871 /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5EB15F152AC139F400E9D871 /* PlusJakartaSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		5EB15F162AC139F400E9D871 /* PlusJakartaSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Light.ttf"; sourceTree = "<group>"; };
+		5EB15F172AC139F400E9D871 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		5EB15F182AC139F400E9D871 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
+		5EB15F192AC139F400E9D871 /* PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; };
+		5EB15F1A2AC139F400E9D871 /* PlusJakartaSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		5EB15F1B2AC139F400E9D871 /* PlusJakartaSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		5EB15F1C2AC139F400E9D871 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
+		5EB15F1D2AC139F400E9D871 /* PlusJakartaSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		5EB15F1E2AC139F400E9D871 /* PlusJakartaSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		5EB15F1F2AC139F400E9D871 /* PlusJakartaSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		5EB15F202AC139F400E9D871 /* PlusJakartaSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Italic.ttf"; sourceTree = "<group>"; };
+		5EB15F212AC139F500E9D871 /* PlusJakartaSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5EB15F302AC13B4800E9D871 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		5EB15F332AC13CF400E9D871 /* LayerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerSettings.swift; sourceTree = "<group>"; };
+		5EB15F352AC17B3800E9D871 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		5FE5484C14B587CB595C4106 /* Pods-HustleChaser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HustleChaser.debug.xcconfig"; path = "Target Support Files/Pods-HustleChaser/Pods-HustleChaser.debug.xcconfig"; sourceTree = "<group>"; };
+		7611B81927BADD84976A5914 /* Pods_HustleChaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HustleChaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B7AF24FCAACF116AA4A9DF /* Pods-HustleChaser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HustleChaser.release.xcconfig"; path = "Target Support Files/Pods-HustleChaser/Pods-HustleChaser.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +89,108 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F24233C5B94769DB1FDFB6 /* Pods_HustleChaser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09F8A09FA3AF81A38245C497 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7611B81927BADD84976A5914 /* Pods_HustleChaser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E74F7BC2AE0E881005AF7CB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5EB15EF52AC1218700E9D871 /* AppDelegate.swift */,
+				5EB15EFB2AC1218700E9D871 /* Main.storyboard */,
+				5EB15F032AC1218900E9D871 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5E74F7BD2AE0E896005AF7CB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5EB15F322AC13CE700E9D871 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5E74F7BE2AE0E8AD005AF7CB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5E74F7BF2AE0E8BB005AF7CB /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5EB15F0E2AC1383700E9D871 /* Home */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		5E74F7C02AE0E8D6005AF7CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5EB15F132AC139CC00E9D871 /* Fonts */,
+				5EB15F012AC1218900E9D871 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5E74F7C12AE0E8E9005AF7CB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5EB15F332AC13CF400E9D871 /* LayerSettings.swift */,
+				5E74F7CF2AE234A1005AF7CB /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5E74F7C22AE0E99F005AF7CB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5E74F7C72AE12B42005AF7CB /* EarningsCollectionViewCell.swift */,
+				5E74F7C82AE12B42005AF7CB /* EarningsCollectionViewCell.xib */,
+				5E74F7CB2AE1320C005AF7CB /* SavingsCollectionViewCell.swift */,
+				5E74F7CC2AE1320C005AF7CB /* SavingsCollectionViewCell.xib */,
+				5E74F7D12AE23582005AF7CB /* TransactionsTableViewCell.swift */,
+				5E74F7D22AE23582005AF7CB /* TransactionsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5E74F7D52AE77663005AF7CB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5E74F7D62AE7766B005AF7CB /* Extension */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5E74F7D62AE7766B005AF7CB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5E74F7D82AE776AE005AF7CB /* Array+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5EB15EE92AC1218700E9D871 = {
 			isa = PBXGroup;
 			children = (
 				5EB15EF42AC1218700E9D871 /* HustleChaser */,
 				5EB15EF32AC1218700E9D871 /* Products */,
+				6AAB945551DD121A25350B65 /* Pods */,
+				09F8A09FA3AF81A38245C497 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +205,75 @@
 		5EB15EF42AC1218700E9D871 /* HustleChaser */ = {
 			isa = PBXGroup;
 			children = (
-				5EB15EF52AC1218700E9D871 /* AppDelegate.swift */,
-				5EB15EF72AC1218700E9D871 /* SceneDelegate.swift */,
-				5EB15EF92AC1218700E9D871 /* ViewController.swift */,
-				5EB15EFB2AC1218700E9D871 /* Main.storyboard */,
-				5EB15F012AC1218900E9D871 /* Assets.xcassets */,
-				5EB15F032AC1218900E9D871 /* LaunchScreen.storyboard */,
+				5E74F7BC2AE0E881005AF7CB /* Application */,
+				5E74F7BD2AE0E896005AF7CB /* Data */,
+				5E74F7D52AE77663005AF7CB /* Domain */,
+				5EB15F0D2AC1381C00E9D871 /* Extension */,
+				5E74F7BE2AE0E8AD005AF7CB /* Repository */,
+				5E74F7C02AE0E8D6005AF7CB /* Resources */,
+				5E74F7BF2AE0E8BB005AF7CB /* Scene */,
+				5E74F7C12AE0E8E9005AF7CB /* Utils */,
 				5EB15F062AC1218900E9D871 /* Info.plist */,
 				5EB15EFE2AC1218700E9D871 /* HustleChaser.xcdatamodeld */,
 			);
 			path = HustleChaser;
+			sourceTree = "<group>";
+		};
+		5EB15F0D2AC1381C00E9D871 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5EB15F0F2AC1384C00E9D871 /* ImageViewExtension.swift */,
+				5EB15F302AC13B4800E9D871 /* ColorExtension.swift */,
+				5EB15F352AC17B3800E9D871 /* ViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5EB15F0E2AC1383700E9D871 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5E74F7C22AE0E99F005AF7CB /* Cell */,
+				5E74F7C32AE0EB7F005AF7CB /* HomeViewController.swift */,
+				5E74F7C42AE0EB7F005AF7CB /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5EB15F132AC139CC00E9D871 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5EB15F1C2AC139F400E9D871 /* PlusJakartaSans-Bold.ttf */,
+				5EB15F1D2AC139F400E9D871 /* PlusJakartaSans-BoldItalic.ttf */,
+				5EB15F142AC139F400E9D871 /* PlusJakartaSans-ExtraBold.ttf */,
+				5EB15F152AC139F400E9D871 /* PlusJakartaSans-ExtraBoldItalic.ttf */,
+				5EB15F212AC139F500E9D871 /* PlusJakartaSans-ExtraLight.ttf */,
+				5EB15F1E2AC139F400E9D871 /* PlusJakartaSans-ExtraLightItalic.ttf */,
+				5EB15F202AC139F400E9D871 /* PlusJakartaSans-Italic.ttf */,
+				5EB15F162AC139F400E9D871 /* PlusJakartaSans-Light.ttf */,
+				5EB15F1F2AC139F400E9D871 /* PlusJakartaSans-LightItalic.ttf */,
+				5EB15F192AC139F400E9D871 /* PlusJakartaSans-Medium.ttf */,
+				5EB15F1B2AC139F400E9D871 /* PlusJakartaSans-MediumItalic.ttf */,
+				5EB15F182AC139F400E9D871 /* PlusJakartaSans-Regular.ttf */,
+				5EB15F172AC139F400E9D871 /* PlusJakartaSans-SemiBold.ttf */,
+				5EB15F1A2AC139F400E9D871 /* PlusJakartaSans-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5EB15F322AC13CE700E9D871 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6AAB945551DD121A25350B65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FE5484C14B587CB595C4106 /* Pods-HustleChaser.debug.xcconfig */,
+				89B7AF24FCAACF116AA4A9DF /* Pods-HustleChaser.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EB15F092AC1218900E9D871 /* Build configuration list for PBXNativeTarget "HustleChaser" */;
 			buildPhases = (
+				2014261780B35BA8E79BDEA9 /* [CP] Check Pods Manifest.lock */,
 				5EB15EEE2AC1218700E9D871 /* Sources */,
 				5EB15EEF2AC1218700E9D871 /* Frameworks */,
 				5EB15EF02AC1218700E9D871 /* Resources */,
+				0D5872941C9046DF0DB2F112 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,23 +336,91 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB15F2E2AC139F500E9D871 /* PlusJakartaSans-Italic.ttf in Resources */,
 				5EB15F052AC1218900E9D871 /* LaunchScreen.storyboard in Resources */,
+				5EB15F242AC139F500E9D871 /* PlusJakartaSans-Light.ttf in Resources */,
+				5E74F7D42AE23582005AF7CB /* TransactionsTableViewCell.xib in Resources */,
 				5EB15F022AC1218900E9D871 /* Assets.xcassets in Resources */,
+				5EB15F222AC139F500E9D871 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
+				5EB15F2B2AC139F500E9D871 /* PlusJakartaSans-BoldItalic.ttf in Resources */,
+				5EB15F272AC139F500E9D871 /* PlusJakartaSans-Medium.ttf in Resources */,
+				5EB15F282AC139F500E9D871 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */,
+				5E74F7CA2AE12B42005AF7CB /* EarningsCollectionViewCell.xib in Resources */,
+				5EB15F292AC139F500E9D871 /* PlusJakartaSans-MediumItalic.ttf in Resources */,
+				5EB15F252AC139F500E9D871 /* PlusJakartaSans-SemiBold.ttf in Resources */,
+				5EB15F262AC139F500E9D871 /* PlusJakartaSans-Regular.ttf in Resources */,
+				5E74F7CE2AE1320C005AF7CB /* SavingsCollectionViewCell.xib in Resources */,
+				5EB15F2F2AC139F500E9D871 /* PlusJakartaSans-ExtraLight.ttf in Resources */,
+				5EB15F2C2AC139F500E9D871 /* PlusJakartaSans-ExtraLightItalic.ttf in Resources */,
+				5EB15F2D2AC139F500E9D871 /* PlusJakartaSans-LightItalic.ttf in Resources */,
+				5EB15F2A2AC139F500E9D871 /* PlusJakartaSans-Bold.ttf in Resources */,
+				5EB15F232AC139F500E9D871 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */,
 				5EB15EFD2AC1218700E9D871 /* Main.storyboard in Resources */,
+				5E74F7C62AE0EB7F005AF7CB /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D5872941C9046DF0DB2F112 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HustleChaser/Pods-HustleChaser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HustleChaser/Pods-HustleChaser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HustleChaser/Pods-HustleChaser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2014261780B35BA8E79BDEA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HustleChaser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EB15EEE2AC1218700E9D871 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB15F342AC13CF400E9D871 /* LayerSettings.swift in Sources */,
+				5E74F7D92AE776AE005AF7CB /* Array+.swift in Sources */,
+				5E74F7CD2AE1320C005AF7CB /* SavingsCollectionViewCell.swift in Sources */,
 				5EB15F002AC1218700E9D871 /* HustleChaser.xcdatamodeld in Sources */,
-				5EB15EFA2AC1218700E9D871 /* ViewController.swift in Sources */,
+				5E74F7C92AE12B42005AF7CB /* EarningsCollectionViewCell.swift in Sources */,
 				5EB15EF62AC1218700E9D871 /* AppDelegate.swift in Sources */,
-				5EB15EF82AC1218700E9D871 /* SceneDelegate.swift in Sources */,
+				5E74F7D02AE234A1005AF7CB /* Constants.swift in Sources */,
+				5EB15F312AC13B4800E9D871 /* ColorExtension.swift in Sources */,
+				5EB15F102AC1384C00E9D871 /* ImageViewExtension.swift in Sources */,
+				5E74F7D32AE23582005AF7CB /* TransactionsTableViewCell.swift in Sources */,
+				5E74F7C52AE0EB7F005AF7CB /* HomeViewController.swift in Sources */,
+				5EB15F362AC17B3800E9D871 /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,12 +567,14 @@
 		};
 		5EB15F0A2AC1218900E9D871 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FE5484C14B587CB595C4106 /* Pods-HustleChaser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 267YL39X87;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HustleChaser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -320,12 +598,14 @@
 		};
 		5EB15F0B2AC1218900E9D871 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89B7AF24FCAACF116AA4A9DF /* Pods-HustleChaser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 267YL39X87;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HustleChaser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
