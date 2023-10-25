@@ -8,6 +8,11 @@
 import UIKit
 
 final class Constants {
+    static var cornerRadius = 10
+    static var savingsCellHeight = 125
+
+    static var emptyString = ""
+
     static func randomColor() -> UIColor {
         let randomInt = Int.random(in: 0..<6)
         switch randomInt {

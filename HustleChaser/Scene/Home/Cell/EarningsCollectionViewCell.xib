@@ -34,7 +34,7 @@
                                 <rect key="frame" x="68" y="15" width="40" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spt-2D-MQ3">
-                                        <rect key="frame" x="14.666666666666671" y="7.3333333333333357" width="11" height="25.333333333333329"/>
+                                        <rect key="frame" x="14.666666666666671" y="8.3333333333333339" width="11" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -49,13 +49,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,500,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9H-im-mZw">
-                                <rect key="frame" x="42.999999999999993" y="237.33333333333334" width="90.333333333333314" height="21.666666666666657"/>
+                                <rect key="frame" x="50.333333333333336" y="239" width="75.666666666666657" height="20"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upwork" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qr1-we-xFn">
-                                <rect key="frame" x="60.333333333333329" y="213.33333333333334" width="55.333333333333329" height="19"/>
+                                <rect key="frame" x="61.666666666666671" y="216.33333333333334" width="52.666666666666671" height="17.666666666666657"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -82,7 +82,10 @@
             </constraints>
             <size key="customSize" width="176" height="269"/>
             <connections>
+                <outlet property="amountLabel" destination="d9H-im-mZw" id="na5-KZ-t8V"/>
                 <outlet property="earningsView" destination="Nuf-Yp-u6B" id="Gvd-TE-09q"/>
+                <outlet property="sourceLabel" destination="qr1-we-xFn" id="osH-mo-AFa"/>
+                <outlet property="symbolLabel" destination="spt-2D-MQ3" id="BZp-xS-yaj"/>
                 <outlet property="symbolView" destination="DOv-wu-z2S" id="c8R-Sj-SOR"/>
             </connections>
             <point key="canvasLocation" x="224.42748091603053" y="65.140845070422543"/>

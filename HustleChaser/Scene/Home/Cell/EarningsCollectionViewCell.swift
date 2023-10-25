@@ -12,18 +12,23 @@ import Then
 class EarningsCollectionViewCell: UICollectionViewCell, NibReusable {
     @IBOutlet private weak var earningsView: UIView!
     @IBOutlet private weak var symbolView: UIView!
-
+    @IBOutlet private weak var symbolLabel: UILabel!
+    @IBOutlet private weak var sourceLabel: UILabel!
+    @IBOutlet private weak var amountLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        configView()
     }
 
-    private func configView() {
+    func configCell(thisExpense: NewExpense) {
         self.do {
-            $0.earningsView.layer.cornerRadius = CGFloat(LayerSettings.radius.rawValue)
+            $0.earningsView.layer.cornerRadius = CGFloat(Constants.cornerRadius)
             $0.earningsView.backgroundColor = Constants.randomColor()
             $0.symbolView.layer.cornerRadius = symbolView.frame.size.width / 2
             $0.symbolView.clipsToBounds = true
+            $0.symbolLabel.text = String(thisExpense.source[0])
+            $0.sourceLabel.text = thisExpense.source
+            $0.amountLabel.text = String(thisExpense.amount)
         }
     }
 }
