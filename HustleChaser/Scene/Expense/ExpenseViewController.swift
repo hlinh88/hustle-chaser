@@ -17,8 +17,10 @@ final class ExpenseViewController: UIViewController, BindableType {
     @IBOutlet private weak var colorCollectionView: UICollectionView!
     @IBOutlet private weak var sourceTextField: UITextField!
     @IBOutlet private weak var amountTextField: UITextField!
-    @IBOutlet private weak var segmentedControl: UISegmentedControl!
-    
+    @IBOutlet private weak var typeSegmented: UISegmentedControl!
+    @IBOutlet private weak var iconSegmented: UISegmentedControl!
+    @IBOutlet private weak var descTextField: UITextField!
+
     var viewModel: ExpenseViewModel!
     private let disposeBag = DisposeBag()
 
@@ -30,6 +32,8 @@ final class ExpenseViewController: UIViewController, BindableType {
     private var amount = 0
     private var type = true
     private var selectedColor = 0
+    private var desc = ""
+    private var logo = "fork.knife"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +59,9 @@ final class ExpenseViewController: UIViewController, BindableType {
             let backButtonTap = UITapGestureRecognizer(target: self, action: #selector(self.handleBackButton(_:)))
             $0.backButton.isUserInteractionEnabled = true
             $0.backButton.addGestureRecognizer(backButtonTap)
-            $0.segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+            $0.typeSegmented.addTarget(self, action: #selector(typeSegmentedValueChanged(_:)), for: .valueChanged)
+            $0.iconSegmented.addTarget(self, action: #selector(iconSegmentedValueChanged(_:)), for: .valueChanged)
+            $0.iconSegmented.isHidden = true
         }
     }
 
@@ -66,6 +72,7 @@ final class ExpenseViewController: UIViewController, BindableType {
             saveTrigger: saveTrigger.asDriver(onErrorDriveWith: .empty()),
             sourceTrigger: sourceTextField.rx.text.orEmpty.asDriver(),
             amountTrigger: amountTextField.rx.text.orEmpty.asDriver(),
+            descTrigger: descTextField.rx.text.orEmpty.asDriver(),
             selectColorTrigger: selectColorTrigger.asDriver(onErrorDriveWith: .empty())
         )
 
@@ -92,6 +99,10 @@ final class ExpenseViewController: UIViewController, BindableType {
         output.amount
             .drive(amountBinding)
             .disposed(by: disposeBag)
+
+        output.desc
+            .drive(descBinding)
+            .disposed(by: disposeBag)
     }
 
     @objc private func dismissKeyboard() {
@@ -106,13 +117,29 @@ final class ExpenseViewController: UIViewController, BindableType {
         let newExpense = NewExpense(source: source,
                                     amount: amount,
                                     type: type,
-                                    color: selectedColor)
+                                    color: selectedColor,
+                                    desc: desc,
+                                    logo: logo)
         saveTrigger.onNext(newExpense)
         backTrigger.onNext(())
     }
 
-    @objc private func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        self.type = segmentedControl.selectedSegmentIndex == 0 ? true : false
+    @objc private func typeSegmentedValueChanged(_ sender: UISegmentedControl) {
+        type = typeSegmented.selectedSegmentIndex == 0 ? true : false
+        iconSegmented.isHidden = typeSegmented.selectedSegmentIndex == 0 ? true : false
+    }
+
+    @objc private func iconSegmentedValueChanged(_ sender: UISegmentedControl) {
+        switch iconSegmented.selectedSegmentIndex {
+        case 1:
+            self.logo = "cart.fill"
+        case 2:
+            self.logo = "building.2.fill"
+        case 3:
+            self.logo = "airplane.departure"
+        default:
+            self.logo = "fork.knife"
+        }
     }
 }
 
@@ -129,6 +156,14 @@ extension ExpenseViewController {
         return Binder(self) { viewController, amount in
             viewController.do {
                 $0.amount = amount
+            }
+        }
+    }
+
+    private var descBinding: Binder<String> {
+        return Binder(self) { viewController, desc in
+            viewController.do {
+                $0.desc = desc
             }
         }
     }

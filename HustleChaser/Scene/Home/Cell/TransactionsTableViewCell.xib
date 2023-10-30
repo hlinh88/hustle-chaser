@@ -27,29 +27,29 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFM-pn-J9Y">
-                        <rect key="frame" x="0.0" y="0.0" width="468" height="91"/>
+                        <rect key="frame" x="10" y="5" width="448" height="81"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laptopcomputer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-H8-qcU">
-                                <rect key="frame" x="10" y="22.333333333333332" width="51" height="46.333333333333343"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-H8-qcU">
+                                <rect key="frame" x="10" y="21.666666666666668" width="41" height="38.999999999999986"/>
                                 <color key="tintColor" name="customYellow"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NZy-H8-qcU" secondAttribute="height" multiplier="1:1" id="mgj-OI-kWt"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adobe Illustrator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4T-rX-nBp">
-                                <rect key="frame" x="71" y="21.666666666666668" width="122.66666666666669" height="19.000000000000004"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4T-rX-nBp">
+                                <rect key="frame" x="66" y="16.666666666666668" width="98" height="19.000000000000004"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9x-dR-Omy">
-                                <rect key="frame" x="71" y="49.666666666666664" width="104.33333333333331" height="17.666666666666664"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9x-dR-Omy">
+                                <rect key="frame" x="66" y="44.666666666666664" width="72" height="16.666666666666664"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-1.5M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO7-Ok-nxz">
-                                <rect key="frame" x="414.33333333333331" y="36" width="43.666666666666686" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO7-Ok-nxz">
+                                <rect key="frame" x="379.66666666666669" y="31" width="58.333333333333314" height="19"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="15"/>
                                 <color key="textColor" name="customRed"/>
                                 <nil key="highlightedColor"/>
@@ -59,29 +59,41 @@
                         <constraints>
                             <constraint firstItem="BO7-Ok-nxz" firstAttribute="centerY" secondItem="AFM-pn-J9Y" secondAttribute="centerY" id="0oE-fP-NMZ"/>
                             <constraint firstAttribute="trailing" secondItem="BO7-Ok-nxz" secondAttribute="trailing" constant="10" id="47x-du-YGO"/>
-                            <constraint firstItem="O4T-rX-nBp" firstAttribute="leading" secondItem="NZy-H8-qcU" secondAttribute="trailing" constant="10" id="4ij-fQ-bX2"/>
+                            <constraint firstItem="O4T-rX-nBp" firstAttribute="leading" secondItem="NZy-H8-qcU" secondAttribute="trailing" constant="15" id="4ij-fQ-bX2"/>
                             <constraint firstItem="NZy-H8-qcU" firstAttribute="leading" secondItem="AFM-pn-J9Y" secondAttribute="leading" constant="10" id="BJI-TB-e2D"/>
                             <constraint firstAttribute="centerY" secondItem="O4T-rX-nBp" secondAttribute="bottom" constant="5" id="BPo-xh-Udi"/>
                             <constraint firstAttribute="centerY" secondItem="t9x-dR-Omy" secondAttribute="top" constant="-4" id="J8M-fR-RDB"/>
                             <constraint firstItem="NZy-H8-qcU" firstAttribute="centerY" secondItem="AFM-pn-J9Y" secondAttribute="centerY" id="S7C-EQ-Wy8"/>
-                            <constraint firstItem="t9x-dR-Omy" firstAttribute="leading" secondItem="NZy-H8-qcU" secondAttribute="trailing" constant="10" id="ubM-mg-eBv"/>
+                            <constraint firstItem="t9x-dR-Omy" firstAttribute="leading" secondItem="NZy-H8-qcU" secondAttribute="trailing" constant="15" id="ubM-mg-eBv"/>
                             <constraint firstItem="NZy-H8-qcU" firstAttribute="top" secondItem="AFM-pn-J9Y" secondAttribute="top" constant="20" id="wSE-lV-6fr"/>
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" name="backgroundColor"/>
                 <constraints>
-                    <constraint firstItem="AFM-pn-J9Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IoH-Bf-LXn"/>
-                    <constraint firstItem="AFM-pn-J9Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PZB-QC-Q4W"/>
-                    <constraint firstAttribute="bottom" secondItem="AFM-pn-J9Y" secondAttribute="bottom" id="uGh-Qx-WDT"/>
-                    <constraint firstAttribute="trailing" secondItem="AFM-pn-J9Y" secondAttribute="trailing" id="zgE-Ec-MVc"/>
+                    <constraint firstItem="AFM-pn-J9Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="IoH-Bf-LXn"/>
+                    <constraint firstItem="AFM-pn-J9Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="PZB-QC-Q4W"/>
+                    <constraint firstAttribute="bottom" secondItem="AFM-pn-J9Y" secondAttribute="bottom" constant="5" id="uGh-Qx-WDT"/>
+                    <constraint firstAttribute="trailing" secondItem="AFM-pn-J9Y" secondAttribute="trailing" constant="10" id="zgE-Ec-MVc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountLabel" destination="BO7-Ok-nxz" id="uSb-VE-H8C"/>
+                <outlet property="contentView" destination="H2p-sc-9uM" id="Zx1-sn-ptX"/>
+                <outlet property="descriptionLabel" destination="t9x-dR-Omy" id="1FC-wh-shl"/>
+                <outlet property="iconImageView" destination="NZy-H8-qcU" id="6vZ-Ag-AqT"/>
+                <outlet property="sourceLabel" destination="O4T-rX-nBp" id="sD1-tc-9MY"/>
+                <outlet property="transView" destination="AFM-pn-J9Y" id="bXA-Al-9Y2"/>
+            </connections>
             <point key="canvasLocation" x="242.74809160305344" y="5.2816901408450709"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="laptopcomputer" catalog="system" width="128" height="71"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <namedColor name="backgroundColor">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="customRed">
             <color red="0.8784313725490196" green="0.32549019607843138" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

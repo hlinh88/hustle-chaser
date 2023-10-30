@@ -19,19 +19,20 @@ extension HomeViewModel: ViewModelType {
     struct Input {
         let loadTrigger: Driver<Void>
         let selectProfileTrigger: Driver<Void>
-        let deleteTrigger: Driver<Void>
+        let seeAllEarningsTrigger: Driver<Void>
+        let seeAllTransactionsTrigger: Driver<Void>
     }
 
     struct Output {
-        let expenses: Driver<[NewExpense]>
-        let deleteExpense: Driver<Void>
+        let earnings: Driver<[NewExpense]>
+        let transactions: Driver<[NewExpense]>
     }
 
     func transform(_ input: HomeViewModel.Input, disposeBag: DisposeBag) -> HomeViewModel.Output {
 
-        let expenses = input.loadTrigger
+        let earnings = input.loadTrigger
             .flatMapLatest {
-                return self.useCase.getExpenses()
+                return self.useCase.getExpenses(type: true)
                     .asDriver(onErrorJustReturn: [])
             }
 
@@ -41,12 +42,25 @@ extension HomeViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
 
-        let deleteExpense = input.deleteTrigger
-            .flatMapLatest { id in
-                return self.useCase.deleteExpenses()
-                    .asDriver(onErrorDriveWith: .empty())
+
+        input.seeAllEarningsTrigger
+            .drive(onNext: { _ in
+                self.navigator.goToEarnings()
+            })
+            .disposed(by: disposeBag)
+
+        input.seeAllTransactionsTrigger
+            .drive(onNext: { _ in
+                self.navigator.goToTransactions()
+            })
+            .disposed(by: disposeBag)
+
+        let transactions = input.loadTrigger
+            .flatMapLatest {
+                return self.useCase.getExpenses(type: false)
+                    .asDriver(onErrorJustReturn: [])
             }
 
-        return Output(expenses: expenses, deleteExpense: deleteExpense)
+        return Output(earnings: earnings, transactions: transactions)
     }
 }

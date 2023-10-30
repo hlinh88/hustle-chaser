@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PlusJakartaSans-Bold.ttf">
+            <string>PlusJakartaSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionsViewController" customModule="HustleChaser" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="EbY-PS-dIY" id="Ipp-O9-MN2"/>
+                <outlet property="transactionsTableView" destination="UKS-sn-1Za" id="SAH-4i-3CP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCx-HW-ZPE">
+                    <rect key="frame" x="0.0" y="59" width="393" height="80"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EbY-PS-dIY">
+                            <rect key="frame" x="15" y="27" width="30" height="26.333333333333329"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="EbY-PS-dIY" secondAttribute="height" multiplier="1:1" id="B2B-Pc-zoX"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKD-Ni-Q1Y">
+                            <rect key="frame" x="119.66666666666669" y="24" width="154" height="32"/>
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="4T8-DI-mky"/>
+                        <constraint firstItem="EbY-PS-dIY" firstAttribute="top" secondItem="jCx-HW-ZPE" secondAttribute="top" constant="25" id="4pN-Ma-qon"/>
+                        <constraint firstItem="yKD-Ni-Q1Y" firstAttribute="centerX" secondItem="jCx-HW-ZPE" secondAttribute="centerX" id="7iT-Of-VJI"/>
+                        <constraint firstItem="EbY-PS-dIY" firstAttribute="centerY" secondItem="jCx-HW-ZPE" secondAttribute="centerY" id="Gxb-ZC-Mil"/>
+                        <constraint firstItem="EbY-PS-dIY" firstAttribute="leading" secondItem="jCx-HW-ZPE" secondAttribute="leading" constant="15" id="buO-K0-ypU"/>
+                        <constraint firstItem="yKD-Ni-Q1Y" firstAttribute="centerY" secondItem="jCx-HW-ZPE" secondAttribute="centerY" id="jB1-HS-FwF"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UKS-sn-1Za">
+                    <rect key="frame" x="0.0" y="139" width="393" height="679"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UKS-sn-1Za" secondAttribute="trailing" id="22w-ZH-HyT"/>
+                <constraint firstItem="UKS-sn-1Za" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5VH-E3-idS"/>
+                <constraint firstItem="jCx-HW-ZPE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="7cL-au-C2H"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="UKS-sn-1Za" secondAttribute="bottom" id="NRT-D0-ZG5"/>
+                <constraint firstItem="UKS-sn-1Za" firstAttribute="top" secondItem="jCx-HW-ZPE" secondAttribute="bottom" id="PmK-0r-Fce"/>
+                <constraint firstItem="jCx-HW-ZPE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="poC-M2-Wdk"/>
+                <constraint firstItem="jCx-HW-ZPE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ubP-dC-8aA"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="-12"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

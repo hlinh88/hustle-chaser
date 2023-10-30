@@ -22,6 +22,7 @@ extension ExpenseViewModel: ViewModelType {
         let saveTrigger: Driver<NewExpense>
         let sourceTrigger: Driver<String>
         let amountTrigger: Driver<String>
+        let descTrigger: Driver<String>
         let selectColorTrigger: Driver<[Int]>
     }
 
@@ -30,6 +31,7 @@ extension ExpenseViewModel: ViewModelType {
         let saveExpense: Driver<Void>
         let source: Driver<String>
         let amount: Driver<Int>
+        let desc: Driver<String>
     }
 
     func transform(_ input: ExpenseViewModel.Input, disposeBag: DisposeBag) -> ExpenseViewModel.Output {
@@ -64,6 +66,13 @@ extension ExpenseViewModel: ViewModelType {
             }
             .asDriver(onErrorJustReturn: 0)
 
-        return Output(colors: colors, saveExpense: saveExpense, source: source, amount: amount)
+        let desc = input.descTrigger
+            .map { desc in
+                return desc
+            }
+            .startWith(Constants.emptyString)
+            .asDriver(onErrorJustReturn: Constants.emptyString)
+
+        return Output(colors: colors, saveExpense: saveExpense, source: source, amount: amount, desc: desc)
     }
 }

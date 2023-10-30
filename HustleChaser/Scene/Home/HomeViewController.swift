@@ -11,19 +11,26 @@ import RxSwift
 import RxCocoa
 
 final class HomeViewController: UIViewController, BindableType {
+    @IBOutlet private weak var greetingLabel: UILabel!
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var earningsCollectionView: UICollectionView!
     @IBOutlet private weak var savingsCollectionView: UICollectionView!
     @IBOutlet private weak var transactionsTableView: UITableView!
     @IBOutlet private weak var balanceView: UIView!
     @IBOutlet private weak var incomeView: UIView!
+    @IBOutlet private weak var incomeLabel: UILabel!
+    @IBOutlet private weak var outcomeLabel: UILabel!
 
     var viewModel: HomeViewModel!
     private let disposeBag = DisposeBag()
 
     private let loadTrigger = PublishSubject<Void>()
     private let selectProfileTrigger = PublishSubject<Void>()
-    private let deleteTrigger = PublishSubject<Void>()
+    private let seeAllEarningsTrigger = PublishSubject<Void>()
+    private let seeAllTransactionsTrigger = PublishSubject<Void>()
+
+    private var income = 0
+    private var outcome = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +49,7 @@ final class HomeViewController: UIViewController, BindableType {
             $0.savingsCollectionView.dataSource = self
             $0.savingsCollectionView.delegate = self
             $0.transactionsTableView.register(cellType: TransactionsTableViewCell.self)
-            $0.transactionsTableView.dataSource = self
-            $0.transactionsTableView.delegate = self
+            $0.transactionsTableView.rowHeight = 80
             $0.balanceView.layer.cornerRadius = CGFloat(Constants.cornerRadius)
             $0.incomeView.layer.cornerRadius = CGFloat(Constants.cornerRadius)
             let profileTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
@@ -53,16 +59,16 @@ final class HomeViewController: UIViewController, BindableType {
     }
 
     func bindViewModel() {
-
         let input = HomeViewModel.Input(
             loadTrigger: loadTrigger.asDriver(onErrorJustReturn: ()),
             selectProfileTrigger: selectProfileTrigger.asDriver(onErrorDriveWith: .empty()),
-            deleteTrigger: deleteTrigger.asDriver(onErrorDriveWith: .empty())
+            seeAllEarningsTrigger: seeAllEarningsTrigger.asDriver(onErrorDriveWith: .empty()),
+            seeAllTransactionsTrigger: seeAllTransactionsTrigger.asDriver(onErrorDriveWith: .empty())
         )
 
         let output = viewModel.transform(input, disposeBag: disposeBag)
 
-        output.expenses
+        output.earnings
             .drive(earningsCollectionView.rx.items) { collectionView, row, expense in
                 let indexPath = IndexPath(row: row, section: 0)
                 let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: EarningsCollectionViewCell.self)
@@ -71,8 +77,21 @@ final class HomeViewController: UIViewController, BindableType {
             }
             .disposed(by: disposeBag)
 
-        output.deleteExpense
-            .drive()
+        output.earnings
+            .drive(incomeBinding)
+            .disposed(by: disposeBag)
+
+        output.transactions
+            .drive(transactionsTableView.rx.items) { tableView, index, transaction in
+                let indexPath = IndexPath(item: index, section: 0)
+                let cell = tableView.dequeueReusableCell(for: indexPath, cellType: TransactionsTableViewCell.self)
+                cell.configCell(thisTransaction: transaction)
+                return cell
+            }
+            .disposed(by: disposeBag)
+
+        output.transactions
+            .drive(outcomeBinding)
             .disposed(by: disposeBag)
     }
 
@@ -80,11 +99,44 @@ final class HomeViewController: UIViewController, BindableType {
         selectProfileTrigger.onNext(())
     }
 
-    @IBAction func handleDelete(_ sender: UIButton) {
-        deleteTrigger.onNext(())
-        loadTrigger.onNext(())
+    @IBAction private func handleEarnings(_ sender: UIButton) {
+        seeAllEarningsTrigger.onNext(())
+    }
+
+    @IBAction private func handleTransactions(_ sender: UIButton) {
+        seeAllTransactionsTrigger.onNext(())
+    }
+    
+}
+
+extension HomeViewController {
+    private var incomeBinding: Binder<[NewExpense]> {
+        return Binder(self) { viewController, expenses in
+            viewController.income = 0
+            _ = expenses.map { expense in
+                viewController.do {
+                    $0.income += expense.amount
+                    $0.incomeLabel.text = "\($0.income.delimiter)₫"
+                    $0.incomeLabel.font = UIFont(name: "PlusJakartaSans-Bold", size: 15)
+                }
+            }
+        }
+    }
+
+    private var outcomeBinding: Binder<[NewExpense]> {
+        return Binder(self) { viewController, expenses in
+            viewController.outcome = 0
+            _ = expenses.map { expense in
+                viewController.do {
+                    $0.outcome += expense.amount
+                    $0.outcomeLabel.text = "\($0.outcome.delimiter)₫"
+                    $0.outcomeLabel.font = UIFont(name: "PlusJakartaSans-Bold", size: 15)
+                }
+            }
+        }
     }
 }
+
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -114,16 +166,5 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: size, height: Constants.savingsCellHeight)
         }
         return CGSize()
-    }
-}
-
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: TransactionsTableViewCell.self)
-        return cell
     }
 }
