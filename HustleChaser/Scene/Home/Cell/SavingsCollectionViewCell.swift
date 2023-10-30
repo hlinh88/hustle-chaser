@@ -19,7 +19,7 @@ final class SavingsCollectionViewCell: UICollectionViewCell, NibReusable {
 
     private func customizeView() {
         self.do {
-            $0.savingsView.layer.cornerRadius = CGFloat(LayerSettings.radius.rawValue)
+            $0.savingsView.layer.cornerRadius = CGFloat(Constants.cornerRadius)
             $0.progressView.progressTintColor = Constants.randomColor()
         }
     }

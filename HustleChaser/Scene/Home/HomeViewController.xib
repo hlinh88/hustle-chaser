@@ -30,6 +30,7 @@
                 <outlet property="balanceView" destination="jbq-h8-p9d" id="qH2-P5-GHW"/>
                 <outlet property="earningsCollectionView" destination="0lz-LB-36p" id="x7B-sZ-1YH"/>
                 <outlet property="incomeView" destination="z0f-ay-pem" id="gze-Tu-CzB"/>
+                <outlet property="profileImageView" destination="b65-Ev-NNC" id="brd-3g-ZYS"/>
                 <outlet property="savingsCollectionView" destination="dDA-PJ-ckS" id="KDF-B2-ecv"/>
                 <outlet property="transactionsTableView" destination="O67-G7-4p4" id="Pzh-pI-bOh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -67,29 +68,24 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqF-aE-3dz">
-                                            <rect key="frame" x="313" y="5" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="bbX-qC-V4c"/>
-                                                <constraint firstAttribute="height" constant="50" id="enA-PV-lVU"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.app" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="b65-Ev-NNC">
+                                            <rect key="frame" x="328" y="14.333333333333336" width="35" height="32"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal">
-                                                <imageReference key="image" image="bell.badge" catalog="system" symbolScale="large"/>
-                                            </state>
-                                        </button>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="Jmv-OK-O1v"/>
+                                                <constraint firstAttribute="width" secondItem="b65-Ev-NNC" secondAttribute="height" multiplier="1:1" id="KYI-UP-jcx"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="3kp-GB-kf0"/>
-                                        <constraint firstItem="ZqF-aE-3dz" firstAttribute="centerY" secondItem="Aoa-ue-I2f" secondAttribute="centerY" id="7Jx-4a-wLJ"/>
                                         <constraint firstItem="aK3-vN-04p" firstAttribute="leading" secondItem="RQI-BU-Ch9" secondAttribute="trailing" constant="10" id="Aeh-zD-n07"/>
+                                        <constraint firstAttribute="trailing" secondItem="b65-Ev-NNC" secondAttribute="trailing" id="JAd-pC-EDT"/>
                                         <constraint firstAttribute="bottom" secondItem="RQI-BU-Ch9" secondAttribute="bottom" id="P4x-cJ-oKH"/>
                                         <constraint firstItem="x2h-Xj-wpw" firstAttribute="top" secondItem="Aoa-ue-I2f" secondAttribute="top" constant="5" id="Ve8-a9-YgK"/>
-                                        <constraint firstAttribute="trailing" secondItem="ZqF-aE-3dz" secondAttribute="trailing" id="g1s-7S-ItZ"/>
                                         <constraint firstItem="x2h-Xj-wpw" firstAttribute="leading" secondItem="RQI-BU-Ch9" secondAttribute="trailing" constant="10" id="geP-Gc-Et0"/>
+                                        <constraint firstItem="b65-Ev-NNC" firstAttribute="centerY" secondItem="Aoa-ue-I2f" secondAttribute="centerY" id="iiy-cr-rCX"/>
                                         <constraint firstItem="RQI-BU-Ch9" firstAttribute="leading" secondItem="Aoa-ue-I2f" secondAttribute="leading" id="ke3-9q-ztB"/>
                                         <constraint firstAttribute="bottom" secondItem="aK3-vN-04p" secondAttribute="bottom" constant="5" id="koL-WE-JMe"/>
                                         <constraint firstItem="RQI-BU-Ch9" firstAttribute="top" secondItem="Aoa-ue-I2f" secondAttribute="top" id="s7I-EM-x4S"/>
@@ -99,7 +95,7 @@
                                     <rect key="frame" x="15" y="80" width="363" height="150"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V01-Sm-j48">
-                                            <rect key="frame" x="15" y="15" width="96" height="19"/>
+                                            <rect key="frame" x="15" y="15" width="95.333333333333329" height="19"/>
                                             <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="15"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -157,7 +153,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfT-lk-M6t">
-                                                    <rect key="frame" x="54.333333333333329" y="15" width="44" height="16"/>
+                                                    <rect key="frame" x="54.333333333333329" y="15" width="43.333333333333329" height="15.333333333333336"/>
                                                     <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -190,7 +186,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws1-KF-hQg">
-                                                    <rect key="frame" x="55.000000000000028" y="15" width="55.333333333333343" height="16"/>
+                                                    <rect key="frame" x="55.000000000000028" y="15" width="55.333333333333343" height="15.333333333333336"/>
                                                     <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -244,6 +240,9 @@
                                             <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="15"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="See All"/>
+                                            <connections>
+                                                <action selector="handleDelete:" destination="-1" eventType="touchUpInside" id="TcV-ZG-YUE"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -258,7 +257,7 @@
                                     <rect key="frame" x="15" y="590" width="363" height="30"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Savings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3N-CC-4ky">
-                                            <rect key="frame" x="0.0" y="2" width="76" height="26"/>
+                                            <rect key="frame" x="0.0" y="2.3333333333333712" width="76" height="25.333333333333332"/>
                                             <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -313,7 +312,7 @@
                                     <rect key="frame" x="15" y="960" width="363" height="30"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAp-gR-61n">
-                                            <rect key="frame" x="0.0" y="2" width="124" height="26"/>
+                                            <rect key="frame" x="0.0" y="2.3333333333333712" width="123.33333333333333" height="25.333333333333332"/>
                                             <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -395,8 +394,8 @@
         <image name="arrow.down" catalog="system" width="118" height="128"/>
         <image name="arrow.up" catalog="system" width="118" height="128"/>
         <image name="avatar" width="512" height="512"/>
-        <image name="bell.badge" catalog="system" width="117" height="128"/>
         <image name="chevron.right.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="red">
             <color red="0.8784313725490196" green="0.32549019607843138" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
