@@ -12,11 +12,15 @@ struct NewExpense: Codable {
     var amount: Int
     var type: Bool
     var color: Int
+    var desc: String?
+    var logo: String?
 
     enum CodingKeys: String, CodingKey {
         case source
         case amount
         case type
         case color
+        case desc
+        case logo
     }
 }

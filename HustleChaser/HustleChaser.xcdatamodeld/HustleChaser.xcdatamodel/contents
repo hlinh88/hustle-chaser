@@ -3,6 +3,8 @@
     <entity name="Expense" representedClassName="Expense" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="color" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="logo" optional="YES" attributeType="String"/>
         <attribute name="source" optional="YES" attributeType="String"/>
         <attribute name="type" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>

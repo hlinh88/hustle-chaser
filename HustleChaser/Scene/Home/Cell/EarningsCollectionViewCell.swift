@@ -28,7 +28,8 @@ class EarningsCollectionViewCell: UICollectionViewCell, NibReusable {
             $0.symbolView.clipsToBounds = true
             $0.symbolLabel.text = String(thisExpense.source[0])
             $0.sourceLabel.text = thisExpense.source
-            $0.amountLabel.text = String(thisExpense.amount)
+            $0.sourceLabel.font = UIFont(name: "PlusJakartaSans-Medium", size: 15)
+            $0.amountLabel.text = "\(thisExpense.amount.delimiter)₫"
         }
     }
 }

@@ -34,7 +34,7 @@
                                 <rect key="frame" x="68" y="15" width="40" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spt-2D-MQ3">
-                                        <rect key="frame" x="14.666666666666671" y="8.3333333333333339" width="11" height="23.333333333333329"/>
+                                        <rect key="frame" x="14.666666666666671" y="7.3333333333333339" width="11" height="25.333333333333329"/>
                                         <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,14 +48,14 @@
                                     <constraint firstItem="spt-2D-MQ3" firstAttribute="centerY" secondItem="DOv-wu-z2S" secondAttribute="centerY" id="tGB-xj-jg4"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,500,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9H-im-mZw">
-                                <rect key="frame" x="50.333333333333336" y="239" width="75.666666666666657" height="20"/>
-                                <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,500,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9H-im-mZw">
+                                <rect key="frame" x="0.0" y="240" width="176" height="19"/>
+                                <fontDescription key="fontDescription" name="PlusJakartaSans-ExtraBold" family="Plus Jakarta Sans" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upwork" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qr1-we-xFn">
-                                <rect key="frame" x="61.666666666666671" y="216.33333333333334" width="52.666666666666671" height="17.666666666666657"/>
+                                <rect key="frame" x="60.666666666666657" y="216" width="55" height="19"/>
                                 <fontDescription key="fontDescription" name="PlusJakartaSans-Regular" family="Plus Jakarta Sans" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -66,8 +66,10 @@
                             <constraint firstItem="DOv-wu-z2S" firstAttribute="top" secondItem="Nuf-Yp-u6B" secondAttribute="top" constant="15" id="0oH-aQ-no3"/>
                             <constraint firstItem="d9H-im-mZw" firstAttribute="top" secondItem="qr1-we-xFn" secondAttribute="bottom" constant="5" id="3Kl-N1-Pl5"/>
                             <constraint firstItem="d9H-im-mZw" firstAttribute="centerX" secondItem="Nuf-Yp-u6B" secondAttribute="centerX" id="7ve-pQ-bIX"/>
+                            <constraint firstItem="d9H-im-mZw" firstAttribute="leading" secondItem="Nuf-Yp-u6B" secondAttribute="leading" id="Dvl-wk-cbV"/>
                             <constraint firstItem="DOv-wu-z2S" firstAttribute="centerX" secondItem="Nuf-Yp-u6B" secondAttribute="centerX" id="G8P-es-l2f"/>
                             <constraint firstAttribute="bottom" secondItem="d9H-im-mZw" secondAttribute="bottom" constant="10" id="K6i-vh-WCa"/>
+                            <constraint firstAttribute="trailing" secondItem="d9H-im-mZw" secondAttribute="trailing" id="KJl-Kj-3Cn"/>
                             <constraint firstItem="qr1-we-xFn" firstAttribute="centerX" secondItem="Nuf-Yp-u6B" secondAttribute="centerX" id="m9B-Jk-e6U"/>
                         </constraints>
                     </view>

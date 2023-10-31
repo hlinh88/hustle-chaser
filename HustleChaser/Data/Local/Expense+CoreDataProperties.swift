@@ -2,7 +2,7 @@
 //  Expense+CoreDataProperties.swift
 //  
 //
-//  Created by Hoang Linh Nguyen on 29/10/2023.
+//  Created by Hoang Linh Nguyen on 30/10/2023.
 //
 //
 
@@ -16,9 +16,11 @@ extension Expense {
         return NSFetchRequest<Expense>(entityName: "Expense")
     }
 
-    @NSManaged public var source: String?
     @NSManaged public var amount: Int64
-    @NSManaged public var type: Bool
     @NSManaged public var color: Int64
+    @NSManaged public var source: String?
+    @NSManaged public var type: Bool
+    @NSManaged public var desc: String?
+    @NSManaged public var logo: String?
 
 }

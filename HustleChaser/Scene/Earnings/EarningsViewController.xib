@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PlusJakartaSans-Bold.ttf">
+            <string>PlusJakartaSans-Bold</string>
+        </array>
+        <array key="PlusJakartaSans-SemiBold.ttf">
+            <string>PlusJakartaSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EarningsViewController" customModule="HustleChaser" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="wAp-ie-Cof" id="gW0-iN-Zfx"/>
+                <outlet property="clearButton" destination="aiw-bq-hi6" id="Jed-90-TIV"/>
+                <outlet property="earningsTableView" destination="W0R-mn-9od" id="1ca-ZO-JZb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDn-DD-HGg">
+                    <rect key="frame" x="0.0" y="59" width="393" height="80"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wAp-ie-Cof">
+                            <rect key="frame" x="15" y="27" width="30" height="26.333333333333329"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="wAp-ie-Cof" secondAttribute="height" multiplier="1:1" id="GQf-LD-9UZ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earnings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-aL-cSS">
+                            <rect key="frame" x="144.66666666666666" y="24" width="104" height="32"/>
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiw-bq-hi6">
+                            <rect key="frame" x="336" y="23.666666666666671" width="42" height="33"/>
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Clear">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="handleClearButton:" destination="-1" eventType="touchUpInside" id="es1-Uh-v5o"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="aiw-bq-hi6" firstAttribute="centerY" secondItem="qDn-DD-HGg" secondAttribute="centerY" id="FWz-2o-zcx"/>
+                        <constraint firstItem="mdA-aL-cSS" firstAttribute="centerY" secondItem="qDn-DD-HGg" secondAttribute="centerY" id="Q9r-hl-gab"/>
+                        <constraint firstItem="mdA-aL-cSS" firstAttribute="centerX" secondItem="qDn-DD-HGg" secondAttribute="centerX" id="a8d-Hi-mxp"/>
+                        <constraint firstItem="wAp-ie-Cof" firstAttribute="top" secondItem="qDn-DD-HGg" secondAttribute="top" constant="25" id="fim-A9-pO0"/>
+                        <constraint firstAttribute="height" constant="80" id="k0K-nN-RLz"/>
+                        <constraint firstItem="wAp-ie-Cof" firstAttribute="leading" secondItem="qDn-DD-HGg" secondAttribute="leading" constant="15" id="ohZ-x3-yNg"/>
+                        <constraint firstItem="wAp-ie-Cof" firstAttribute="centerY" secondItem="qDn-DD-HGg" secondAttribute="centerY" id="ozD-rl-9s6"/>
+                        <constraint firstAttribute="trailing" secondItem="aiw-bq-hi6" secondAttribute="trailing" constant="15" id="yhN-DR-RiL"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W0R-mn-9od">
+                    <rect key="frame" x="0.0" y="139" width="393" height="679"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qDn-DD-HGg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="63G-fx-JAl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W0R-mn-9od" secondAttribute="trailing" id="9bX-9i-v94"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="W0R-mn-9od" secondAttribute="bottom" id="L8a-0m-2xe"/>
+                <constraint firstItem="qDn-DD-HGg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qid-og-jft"/>
+                <constraint firstItem="W0R-mn-9od" firstAttribute="top" secondItem="qDn-DD-HGg" secondAttribute="bottom" id="SNZ-zi-CnV"/>
+                <constraint firstItem="W0R-mn-9od" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aCS-8R-fjV"/>
+                <constraint firstItem="qDn-DD-HGg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ils-JR-bsU"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

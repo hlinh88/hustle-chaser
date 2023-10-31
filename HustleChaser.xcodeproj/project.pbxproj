@@ -61,6 +61,19 @@
 		5EB15F2E2AC139F500E9D871 /* PlusJakartaSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F202AC139F400E9D871 /* PlusJakartaSans-Italic.ttf */; };
 		5EB15F2F2AC139F500E9D871 /* PlusJakartaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EB15F212AC139F500E9D871 /* PlusJakartaSans-ExtraLight.ttf */; };
 		5EB15F362AC17B3800E9D871 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB15F352AC17B3800E9D871 /* View+Extension.swift */; };
+		5ECFFB6D2AEFF6A100A74DC6 /* EarningsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB6B2AEFF6A100A74DC6 /* EarningsViewController.swift */; };
+		5ECFFB6E2AEFF6A100A74DC6 /* EarningsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECFFB6C2AEFF6A100A74DC6 /* EarningsViewController.xib */; };
+		5ECFFB702AEFF6BF00A74DC6 /* EarningsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB6F2AEFF6BF00A74DC6 /* EarningsNavigator.swift */; };
+		5ECFFB722AEFF6F600A74DC6 /* EarningsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB712AEFF6F600A74DC6 /* EarningsUseCase.swift */; };
+		5ECFFB742AEFF71100A74DC6 /* EarningsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB732AEFF71100A74DC6 /* EarningsViewModel.swift */; };
+		5ECFFB782AF0ADE700A74DC6 /* EarningsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB762AF0ADE700A74DC6 /* EarningsTableViewCell.swift */; };
+		5ECFFB792AF0ADE700A74DC6 /* EarningsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECFFB772AF0ADE700A74DC6 /* EarningsTableViewCell.xib */; };
+		5ECFFB7B2AF0B9E400A74DC6 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB7A2AF0B9E400A74DC6 /* Int+Extension.swift */; };
+		5ECFFB7F2AF1268900A74DC6 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB7D2AF1268900A74DC6 /* TransactionsViewController.swift */; };
+		5ECFFB802AF1268900A74DC6 /* TransactionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECFFB7E2AF1268900A74DC6 /* TransactionsViewController.xib */; };
+		5ECFFB822AF126A800A74DC6 /* TransactionsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB812AF126A800A74DC6 /* TransactionsNavigator.swift */; };
+		5ECFFB842AF126B300A74DC6 /* TransactionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB832AF126B300A74DC6 /* TransactionsUseCase.swift */; };
+		5ECFFB862AF126E900A74DC6 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB852AF126E900A74DC6 /* TransactionsViewModel.swift */; };
 		99F24233C5B94769DB1FDFB6 /* Pods_HustleChaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7611B81927BADD84976A5914 /* Pods_HustleChaser.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +134,19 @@
 		5EB15F202AC139F400E9D871 /* PlusJakartaSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Italic.ttf"; sourceTree = "<group>"; };
 		5EB15F212AC139F500E9D871 /* PlusJakartaSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraLight.ttf"; sourceTree = "<group>"; };
 		5EB15F352AC17B3800E9D871 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		5ECFFB6B2AEFF6A100A74DC6 /* EarningsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsViewController.swift; sourceTree = "<group>"; };
+		5ECFFB6C2AEFF6A100A74DC6 /* EarningsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EarningsViewController.xib; sourceTree = "<group>"; };
+		5ECFFB6F2AEFF6BF00A74DC6 /* EarningsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsNavigator.swift; sourceTree = "<group>"; };
+		5ECFFB712AEFF6F600A74DC6 /* EarningsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsUseCase.swift; sourceTree = "<group>"; };
+		5ECFFB732AEFF71100A74DC6 /* EarningsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsViewModel.swift; sourceTree = "<group>"; };
+		5ECFFB762AF0ADE700A74DC6 /* EarningsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsTableViewCell.swift; sourceTree = "<group>"; };
+		5ECFFB772AF0ADE700A74DC6 /* EarningsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EarningsTableViewCell.xib; sourceTree = "<group>"; };
+		5ECFFB7A2AF0B9E400A74DC6 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		5ECFFB7D2AF1268900A74DC6 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		5ECFFB7E2AF1268900A74DC6 /* TransactionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsViewController.xib; sourceTree = "<group>"; };
+		5ECFFB812AF126A800A74DC6 /* TransactionsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsNavigator.swift; sourceTree = "<group>"; };
+		5ECFFB832AF126B300A74DC6 /* TransactionsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsUseCase.swift; sourceTree = "<group>"; };
+		5ECFFB852AF126E900A74DC6 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
 		5FE5484C14B587CB595C4106 /* Pods-HustleChaser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HustleChaser.debug.xcconfig"; path = "Target Support Files/Pods-HustleChaser/Pods-HustleChaser.debug.xcconfig"; sourceTree = "<group>"; };
 		7611B81927BADD84976A5914 /* Pods_HustleChaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HustleChaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B7AF24FCAACF116AA4A9DF /* Pods-HustleChaser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HustleChaser.release.xcconfig"; path = "Target Support Files/Pods-HustleChaser/Pods-HustleChaser.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,8 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				5E1249D22AE7E1A600019865 /* App */,
+				5ECFFB6A2AEFF65600A74DC6 /* Earnings */,
 				5E1249CC2AE7E13000019865 /* Expense */,
 				5EB15F0E2AC1383700E9D871 /* Home */,
+				5ECFFB7C2AF1265D00A74DC6 /* Transactions */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -250,6 +278,7 @@
 				5E74F7D82AE776AE005AF7CB /* Array+Extension.swift */,
 				5EB15F352AC17B3800E9D871 /* View+Extension.swift */,
 				5E5925072AEF812F0089F7B4 /* String+Extension.swift */,
+				5ECFFB7A2AF0B9E400A74DC6 /* Int+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -354,6 +383,40 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		5ECFFB6A2AEFF65600A74DC6 /* Earnings */ = {
+			isa = PBXGroup;
+			children = (
+				5ECFFB752AF0ADD200A74DC6 /* Cell */,
+				5ECFFB6B2AEFF6A100A74DC6 /* EarningsViewController.swift */,
+				5ECFFB6C2AEFF6A100A74DC6 /* EarningsViewController.xib */,
+				5ECFFB6F2AEFF6BF00A74DC6 /* EarningsNavigator.swift */,
+				5ECFFB712AEFF6F600A74DC6 /* EarningsUseCase.swift */,
+				5ECFFB732AEFF71100A74DC6 /* EarningsViewModel.swift */,
+			);
+			path = Earnings;
+			sourceTree = "<group>";
+		};
+		5ECFFB752AF0ADD200A74DC6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5ECFFB762AF0ADE700A74DC6 /* EarningsTableViewCell.swift */,
+				5ECFFB772AF0ADE700A74DC6 /* EarningsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5ECFFB7C2AF1265D00A74DC6 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				5ECFFB7D2AF1268900A74DC6 /* TransactionsViewController.swift */,
+				5ECFFB7E2AF1268900A74DC6 /* TransactionsViewController.xib */,
+				5ECFFB812AF126A800A74DC6 /* TransactionsNavigator.swift */,
+				5ECFFB832AF126B300A74DC6 /* TransactionsUseCase.swift */,
+				5ECFFB852AF126E900A74DC6 /* TransactionsViewModel.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
 		5EFFC9822AEEA78800FEB0C9 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,14 +495,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EB15F2E2AC139F500E9D871 /* PlusJakartaSans-Italic.ttf in Resources */,
+				5ECFFB6E2AEFF6A100A74DC6 /* EarningsViewController.xib in Resources */,
 				5EB15F052AC1218900E9D871 /* LaunchScreen.storyboard in Resources */,
 				5EB15F242AC139F500E9D871 /* PlusJakartaSans-Light.ttf in Resources */,
 				5E74F7D42AE23582005AF7CB /* TransactionsTableViewCell.xib in Resources */,
 				5EB15F022AC1218900E9D871 /* Assets.xcassets in Resources */,
 				5EB15F222AC139F500E9D871 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
+				5ECFFB802AF1268900A74DC6 /* TransactionsViewController.xib in Resources */,
 				5EB15F2B2AC139F500E9D871 /* PlusJakartaSans-BoldItalic.ttf in Resources */,
 				5EB15F272AC139F500E9D871 /* PlusJakartaSans-Medium.ttf in Resources */,
 				5EB15F282AC139F500E9D871 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */,
+				5ECFFB792AF0ADE700A74DC6 /* EarningsTableViewCell.xib in Resources */,
 				5E74F7CA2AE12B42005AF7CB /* EarningsCollectionViewCell.xib in Resources */,
 				5E1249E92AEA3C1F00019865 /* ExpenseCollectionViewCell.xib in Resources */,
 				5EB15F292AC139F500E9D871 /* PlusJakartaSans-MediumItalic.ttf in Resources */,
@@ -508,10 +574,14 @@
 			files = (
 				5E1249DC2AE7E1E400019865 /* ViewModelType.swift in Sources */,
 				5E1249E22AE9557600019865 /* ExpenseUseCase.swift in Sources */,
+				5ECFFB742AEFF71100A74DC6 /* EarningsViewModel.swift in Sources */,
 				5E74F7D92AE776AE005AF7CB /* Array+Extension.swift in Sources */,
 				5E1249D62AE7E1BB00019865 /* AppUseCase.swift in Sources */,
 				5E74F7CD2AE1320C005AF7CB /* SavingsCollectionViewCell.swift in Sources */,
+				5ECFFB7F2AF1268900A74DC6 /* TransactionsViewController.swift in Sources */,
+				5ECFFB822AF126A800A74DC6 /* TransactionsNavigator.swift in Sources */,
 				5E74F8302AE7DD98005AF7CB /* CoreDataService.swift in Sources */,
+				5ECFFB7B2AF0B9E400A74DC6 /* Int+Extension.swift in Sources */,
 				5E1249CB2AE7E0C000019865 /* HomeViewModel.swift in Sources */,
 				5E5925082AEF812F0089F7B4 /* String+Extension.swift in Sources */,
 				5EB15F002AC1218700E9D871 /* HustleChaser.xcdatamodeld in Sources */,
@@ -519,21 +589,27 @@
 				5E74F7C92AE12B42005AF7CB /* EarningsCollectionViewCell.swift in Sources */,
 				5E654B422AEEA51900F4C7CD /* CoreDataRepository.swift in Sources */,
 				5E1249D02AE7E14500019865 /* ExpenseViewController.swift in Sources */,
+				5ECFFB6D2AEFF6A100A74DC6 /* EarningsViewController.swift in Sources */,
 				5EB15EF62AC1218700E9D871 /* AppDelegate.swift in Sources */,
+				5ECFFB862AF126E900A74DC6 /* TransactionsViewModel.swift in Sources */,
 				5E819DBB2AEEA428006F8AFF /* Expense+CoreDataProperties.swift in Sources */,
+				5ECFFB722AEFF6F600A74DC6 /* EarningsUseCase.swift in Sources */,
 				5E819DB82AEEA3AF006F8AFF /* NewExpense.swift in Sources */,
 				5E1249DA2AE7E1D200019865 /* BindableType.swift in Sources */,
+				5ECFFB702AEFF6BF00A74DC6 /* EarningsNavigator.swift in Sources */,
 				5E1249D82AE7E1C100019865 /* AppViewModel.swift in Sources */,
 				5E1249E42AE9557F00019865 /* ExpenseViewModel.swift in Sources */,
 				5E74F7D02AE234A1005AF7CB /* Constants.swift in Sources */,
 				5E74F7D32AE23582005AF7CB /* TransactionsTableViewCell.swift in Sources */,
 				5E819DBC2AEEA428006F8AFF /* Expense+CoreDataClass.swift in Sources */,
 				5E1249D42AE7E1B200019865 /* AppNavigator.swift in Sources */,
+				5ECFFB842AF126B300A74DC6 /* TransactionsUseCase.swift in Sources */,
 				5E1249C92AE7E0B600019865 /* HomeUseCase.swift in Sources */,
 				5E1249E82AEA3C1F00019865 /* ExpenseCollectionViewCell.swift in Sources */,
 				5E74F8342AE7DDDF005AF7CB /* Person+CoreDataClass.swift in Sources */,
 				5E74F7C52AE0EB7F005AF7CB /* HomeViewController.swift in Sources */,
 				5E74F8372AE7DE35005AF7CB /* CoreDataErrorType.swift in Sources */,
+				5ECFFB782AF0ADE700A74DC6 /* EarningsTableViewCell.swift in Sources */,
 				5EB15F362AC17B3800E9D871 /* View+Extension.swift in Sources */,
 				5E1249E02AE9556E00019865 /* ExpenseNavigator.swift in Sources */,
 				5E74F8332AE7DDDF005AF7CB /* Person+CoreDataProperties.swift in Sources */,

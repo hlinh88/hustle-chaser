@@ -25,10 +25,12 @@
                 <outlet property="amountTextField" destination="yOH-Gz-ynG" id="cUP-dL-wC1"/>
                 <outlet property="backButton" destination="ysD-aO-FFv" id="FFU-5N-HOF"/>
                 <outlet property="colorCollectionView" destination="pGd-wU-AZV" id="PR9-zC-fYn"/>
+                <outlet property="descTextField" destination="X2q-cO-8Tw" id="tP4-0C-eKu"/>
+                <outlet property="iconSegmented" destination="xXz-FU-FS6" id="WgV-MG-iM0"/>
                 <outlet property="saveButton" destination="w7p-5B-2qk" id="z0H-Ut-nU5"/>
-                <outlet property="segmentedControl" destination="Vbl-4M-AQz" id="2Dj-Zn-XaS"/>
                 <outlet property="sourceTextField" destination="ygr-qJ-Mel" id="EIR-aH-EtF"/>
                 <outlet property="superView" destination="i5M-Pr-FkT" id="nvp-jd-tOF"/>
+                <outlet property="typeSegmented" destination="Vbl-4M-AQz" id="TyJ-vL-R7R"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -97,17 +99,16 @@
                     <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="20"/>
                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                 </textField>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vbl-4M-AQz">
-                    <rect key="frame" x="15" y="579" width="363" height="51"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2q-cO-8Tw">
+                    <rect key="frame" x="15" y="579" width="363" height="50"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="WgI-MG-hbs"/>
+                        <constraint firstAttribute="height" constant="50" id="uCE-TD-JCi"/>
                     </constraints>
-                    <segments>
-                        <segment title="Income"/>
-                        <segment title="Outcome"/>
-                    </segments>
-                    <color key="selectedSegmentTintColor" systemColor="opaqueSeparatorColor"/>
-                </segmentedControl>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pGd-wU-AZV">
                     <rect key="frame" x="15" y="159" width="363" height="250"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -121,31 +122,65 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vbl-4M-AQz">
+                    <rect key="frame" x="15" y="649" width="363" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="WgI-MG-hbs"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Income"/>
+                        <segment title="Outcome"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" systemColor="opaqueSeparatorColor"/>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xXz-FU-FS6">
+                    <rect key="frame" x="15" y="719" width="363" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Zcs-Lc-2xg"/>
+                    </constraints>
+                    <segments>
+                        <segment title="" image="fork.knife" catalog="system"/>
+                        <segment title="" image="cart.fill" catalog="system"/>
+                        <segment title="" image="building.2.fill" catalog="system"/>
+                        <segment title="" image="airplane.departure" catalog="system"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" systemColor="opaqueSeparatorColor"/>
+                </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Vbl-4M-AQz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="1FD-XC-DAX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pGd-wU-AZV" secondAttribute="trailing" constant="15" id="5c1-aa-b68"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xXz-FU-FS6" secondAttribute="trailing" constant="15" id="6Jo-3C-hcv"/>
+                <constraint firstItem="X2q-cO-8Tw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="6MZ-F0-Lik"/>
+                <constraint firstItem="xXz-FU-FS6" firstAttribute="top" secondItem="Vbl-4M-AQz" secondAttribute="bottom" constant="20" id="CAW-uo-obq"/>
                 <constraint firstItem="pGd-wU-AZV" firstAttribute="top" secondItem="rUm-we-dYN" secondAttribute="bottom" constant="20" id="Jwg-TD-cvn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ygr-qJ-Mel" secondAttribute="trailing" constant="15" id="Nc4-eg-Cfr"/>
                 <constraint firstItem="ygr-qJ-Mel" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="O2J-t8-RAt"/>
+                <constraint firstItem="xXz-FU-FS6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="ODU-Fs-eps"/>
                 <constraint firstItem="yOH-Gz-ynG" firstAttribute="top" secondItem="ygr-qJ-Mel" secondAttribute="bottom" constant="20" id="RKW-ae-nIK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X2q-cO-8Tw" secondAttribute="trailing" constant="15" id="Wi3-oR-112"/>
                 <constraint firstItem="pGd-wU-AZV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="aBH-LW-ale"/>
-                <constraint firstItem="Vbl-4M-AQz" firstAttribute="top" secondItem="yOH-Gz-ynG" secondAttribute="bottom" constant="20" id="aRS-Vw-lXS"/>
+                <constraint firstItem="X2q-cO-8Tw" firstAttribute="top" secondItem="yOH-Gz-ynG" secondAttribute="bottom" constant="20" id="dQ5-n0-vLs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vbl-4M-AQz" secondAttribute="trailing" constant="15" id="ibd-Ch-AlA"/>
                 <constraint firstItem="yOH-Gz-ynG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="lBF-TX-d6P"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yOH-Gz-ynG" secondAttribute="trailing" constant="15" id="njl-Jk-gCJ"/>
                 <constraint firstItem="ygr-qJ-Mel" firstAttribute="top" secondItem="pGd-wU-AZV" secondAttribute="bottom" constant="30" id="oHV-d6-qGP"/>
                 <constraint firstItem="rUm-we-dYN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pMc-hC-jPv"/>
                 <constraint firstItem="rUm-we-dYN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qiq-Sn-iOb"/>
+                <constraint firstItem="Vbl-4M-AQz" firstAttribute="top" secondItem="X2q-cO-8Tw" secondAttribute="bottom" constant="20" id="tH0-hC-PdL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rUm-we-dYN" secondAttribute="trailing" id="uOu-Q1-Ace"/>
             </constraints>
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
+        <image name="airplane.departure" catalog="system" width="128" height="84"/>
+        <image name="building.2.fill" catalog="system" width="128" height="117"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="fork.knife" catalog="system" width="94" height="128"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

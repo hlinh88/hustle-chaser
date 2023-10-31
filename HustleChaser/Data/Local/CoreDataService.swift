@@ -23,19 +23,24 @@ final class CoreDataService {
         return container
     }()
 
-    func getExpenses() -> Observable<[NewExpense]> {
+    func getExpenses(type: Bool) -> Observable<[NewExpense]> {
         let context = persistentContainer.viewContext
         let request = Expense.fetchRequest()
         return Observable.create { observer in
             do {
                 let expenseEntity = try context.fetch(request)
-                let expense = expenseEntity.map { exp -> NewExpense in
-                    return NewExpense(source: exp.source ?? Constants.emptyString,
-                                      amount: Int(exp.amount),
-                                      type: exp.type,
-                                      color: Int(exp.color))
+                var expenses: [NewExpense] = []
+                _ = expenseEntity.map { exp in
+                    if exp.type == type {
+                        expenses.append(NewExpense(source: exp.source ?? Constants.emptyString,
+                                                   amount: Int(exp.amount),
+                                                   type: exp.type,
+                                                   color: Int(exp.color),
+                                                   desc: exp.desc ?? Constants.emptyString,
+                                                   logo: exp.logo ?? Constants.emptyString))
+                    }
                 }
-                observer.onNext(expense)
+                observer.onNext(expenses)
                 observer.onCompleted()
             } catch {
                 observer.onError(CoreDataErrorType.getExpensesFailed)
@@ -53,6 +58,8 @@ final class CoreDataService {
                     $0.amount = Int64(thisExpense.amount)
                     $0.type = thisExpense.type
                     $0.color = Int64(thisExpense.color)
+                    $0.desc = thisExpense.desc
+                    $0.logo = thisExpense.logo
                 }
                 try context.save()
                 observer.onNext(())
