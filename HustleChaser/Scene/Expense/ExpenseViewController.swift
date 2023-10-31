@@ -44,12 +44,6 @@ final class ExpenseViewController: UIViewController, BindableType {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-
     private func configView() {
         self.do {
             let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
@@ -119,7 +113,8 @@ final class ExpenseViewController: UIViewController, BindableType {
                                     type: type,
                                     color: selectedColor,
                                     desc: desc,
-                                    logo: logo)
+                                    logo: logo,
+                                    id: UUID().uuidString)
         saveTrigger.onNext(newExpense)
         backTrigger.onNext(())
     }

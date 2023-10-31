@@ -12,6 +12,8 @@ import RxCocoa
 
 final class HomeViewController: UIViewController, BindableType {
     @IBOutlet private weak var greetingLabel: UILabel!
+    @IBOutlet private weak var usernameLabel: UILabel!
+    @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var earningsCollectionView: UICollectionView!
     @IBOutlet private weak var savingsCollectionView: UICollectionView!
@@ -25,9 +27,11 @@ final class HomeViewController: UIViewController, BindableType {
     private let disposeBag = DisposeBag()
 
     private let loadTrigger = PublishSubject<Void>()
-    private let selectProfileTrigger = PublishSubject<Void>()
+    private let selectNewExpenseTrigger = PublishSubject<Void>()
     private let seeAllEarningsTrigger = PublishSubject<Void>()
     private let seeAllTransactionsTrigger = PublishSubject<Void>()
+    private let seeAllSavingsTrigger = PublishSubject<Void>()
+    private let profileTrigger = PublishSubject<Void>()
 
     private var income = 0
     private var outcome = 0
@@ -61,9 +65,11 @@ final class HomeViewController: UIViewController, BindableType {
     func bindViewModel() {
         let input = HomeViewModel.Input(
             loadTrigger: loadTrigger.asDriver(onErrorJustReturn: ()),
-            selectProfileTrigger: selectProfileTrigger.asDriver(onErrorDriveWith: .empty()),
+            selectNewExpenseTrigger: selectNewExpenseTrigger.asDriver(onErrorDriveWith: .empty()),
             seeAllEarningsTrigger: seeAllEarningsTrigger.asDriver(onErrorDriveWith: .empty()),
-            seeAllTransactionsTrigger: seeAllTransactionsTrigger.asDriver(onErrorDriveWith: .empty())
+            seeAllTransactionsTrigger: seeAllTransactionsTrigger.asDriver(onErrorDriveWith: .empty()),
+            seeAllSavingsTrigger: seeAllSavingsTrigger.asDriver(onErrorDriveWith: .empty()),
+            profileTrigger: profileTrigger.asDriver(onErrorDriveWith: .empty())
         )
 
         let output = viewModel.transform(input, disposeBag: disposeBag)
@@ -93,10 +99,18 @@ final class HomeViewController: UIViewController, BindableType {
         output.transactions
             .drive(outcomeBinding)
             .disposed(by: disposeBag)
+
+        output.user
+            .drive(userBinding)
+            .disposed(by: disposeBag)
     }
 
+    @IBAction private func handleBalance(_ sender: UIButton) {
+        profileTrigger.onNext(())
+    }
+    
     @objc private func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-        selectProfileTrigger.onNext(())
+        selectNewExpenseTrigger.onNext(())
     }
 
     @IBAction private func handleEarnings(_ sender: UIButton) {
@@ -107,6 +121,9 @@ final class HomeViewController: UIViewController, BindableType {
         seeAllTransactionsTrigger.onNext(())
     }
     
+    @IBAction private func handleSavings(_ sender: UIButton) {
+        seeAllSavingsTrigger.onNext(())
+    }
 }
 
 extension HomeViewController {
@@ -132,6 +149,15 @@ extension HomeViewController {
                     $0.outcomeLabel.text = "\($0.outcome.delimiter)₫"
                     $0.outcomeLabel.font = UIFont(name: "PlusJakartaSans-Bold", size: 15)
                 }
+            }
+        }
+    }
+
+    private var userBinding: Binder<User> {
+        return Binder(self) { viewController, user in
+            viewController.do {
+                $0.usernameLabel.text = user.name
+                $0.balanceLabel.text = "VND \(user.balance.delimiter)"
             }
         }
     }

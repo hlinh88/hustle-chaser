@@ -11,6 +11,8 @@ protocol HomeNavigatorType {
     func goToNewExpense()
     func goToEarnings()
     func goToTransactions()
+    func goToSavings()
+    func goToProfile()
 }
 
 struct HomeNavigator: HomeNavigatorType {
@@ -39,6 +41,24 @@ struct HomeNavigator: HomeNavigatorType {
         let navigator = TransactionsNavigator(navigationController: navigationController)
         let useCase = TransactionsUseCase()
         let viewModel = TransactionsViewModel(useCase: useCase, navigator: navigator)
+        viewController.bindViewModel(to: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+
+    func goToSavings() {
+        let viewController = SavingsViewController()
+        let navigator = SavingsNavigator(navigationController: navigationController)
+        let useCase = SavingsUseCase()
+        let viewModel = SavingsViewModel(useCase: useCase, navigator: navigator)
+        viewController.bindViewModel(to: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+
+    func goToProfile() {
+        let viewController = ProfileViewController()
+        let navigator = ProfileNavigator(navigationController: navigationController)
+        let useCase = ProfileUseCase()
+        let viewModel = ProfileViewModel(useCase: useCase, navigator: navigator)
         viewController.bindViewModel(to: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }

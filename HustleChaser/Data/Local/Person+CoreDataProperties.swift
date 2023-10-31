@@ -2,7 +2,7 @@
 //  Person+CoreDataProperties.swift
 //  
 //
-//  Created by Hoang Linh Nguyen on 24/10/2023.
+//  Created by Hoang Linh Nguyen on 6/11/2023.
 //
 //
 
@@ -16,9 +16,8 @@ extension Person {
         return NSFetchRequest<Person>(entityName: "Person")
     }
 
+    @NSManaged public var balance: Int64
     @NSManaged public var name: String?
-    @NSManaged public var totalBalance: Int64
-    @NSManaged public var income: Int64
-    @NSManaged public var outcome: Int64
+    @NSManaged public var id: String?
 
 }

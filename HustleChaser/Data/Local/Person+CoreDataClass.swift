@@ -2,7 +2,7 @@
 //  Person+CoreDataClass.swift
 //  
 //
-//  Created by Hoang Linh Nguyen on 24/10/2023.
+//  Created by Hoang Linh Nguyen on 6/11/2023.
 //
 //
 

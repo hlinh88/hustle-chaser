@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/hlinhxd/Desktop/Hustle-Chaser/HustleChaser/Data/Local/Savings+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/hlinhxd/Desktop/Hustle-Chaser/HustleChaser/Data/Local/Savings+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:/Users/hlinhxd/Desktop/Hustle-Chaser/HustleChaser/Data/Local/Expense+CoreDataClass.swift">
    </FileRef>
    <FileRef

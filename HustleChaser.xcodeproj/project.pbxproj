@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E067C892AF135F500ED163E /* SavingsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E067C882AF135F500ED163E /* SavingsNavigator.swift */; };
+		5E067C8B2AF1361E00ED163E /* SavingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E067C8A2AF1361E00ED163E /* SavingsUseCase.swift */; };
+		5E067C8D2AF1364A00ED163E /* SavingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E067C8C2AF1364A00ED163E /* SavingsViewModel.swift */; };
+		5E067C902AF137A200ED163E /* Savings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E067C8E2AF137A200ED163E /* Savings+CoreDataClass.swift */; };
+		5E067C912AF137A200ED163E /* Savings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E067C8F2AF137A200ED163E /* Savings+CoreDataProperties.swift */; };
 		5E1249C72AE7E0AC00019865 /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1249C62AE7E0AC00019865 /* HomeNavigator.swift */; };
 		5E1249C92AE7E0B600019865 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1249C82AE7E0B600019865 /* HomeUseCase.swift */; };
 		5E1249CB2AE7E0C000019865 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1249CA2AE7E0C000019865 /* HomeViewModel.swift */; };
@@ -22,6 +27,11 @@
 		5E1249E42AE9557F00019865 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1249E32AE9557F00019865 /* ExpenseViewModel.swift */; };
 		5E1249E82AEA3C1F00019865 /* ExpenseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1249E62AEA3C1F00019865 /* ExpenseCollectionViewCell.swift */; };
 		5E1249E92AEA3C1F00019865 /* ExpenseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1249E72AEA3C1F00019865 /* ExpenseCollectionViewCell.xib */; };
+		5E20FDE92AF3A7F600FA7572 /* NewSavingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20FDE82AF3A7F600FA7572 /* NewSavingNavigator.swift */; };
+		5E20FDEB2AF3A7FE00FA7572 /* NewSavingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20FDEA2AF3A7FE00FA7572 /* NewSavingUseCase.swift */; };
+		5E20FDED2AF3A80600FA7572 /* NewSavingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20FDEC2AF3A80600FA7572 /* NewSavingViewModel.swift */; };
+		5E20FDF22AF3B0A500FA7572 /* NewSavingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20FDF02AF3B0A500FA7572 /* NewSavingViewController.swift */; };
+		5E20FDF32AF3B0A500FA7572 /* NewSavingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E20FDF12AF3B0A500FA7572 /* NewSavingViewController.xib */; };
 		5E5925082AEF812F0089F7B4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5925072AEF812F0089F7B4 /* String+Extension.swift */; };
 		5E654B422AEEA51900F4C7CD /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E654B412AEEA51900F4C7CD /* CoreDataRepository.swift */; };
 		5E74F7C52AE0EB7F005AF7CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74F7C32AE0EB7F005AF7CB /* HomeViewController.swift */; };
@@ -74,10 +84,23 @@
 		5ECFFB822AF126A800A74DC6 /* TransactionsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB812AF126A800A74DC6 /* TransactionsNavigator.swift */; };
 		5ECFFB842AF126B300A74DC6 /* TransactionsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB832AF126B300A74DC6 /* TransactionsUseCase.swift */; };
 		5ECFFB862AF126E900A74DC6 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB852AF126E900A74DC6 /* TransactionsViewModel.swift */; };
+		5ECFFB8A2AF1342000A74DC6 /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB882AF1342000A74DC6 /* SavingsViewController.swift */; };
+		5ECFFB8B2AF1342000A74DC6 /* SavingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECFFB892AF1342000A74DC6 /* SavingsViewController.xib */; };
+		5EFC16A42AF8DBE800CBF2EE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFC16A22AF8DBE800CBF2EE /* ProfileViewController.swift */; };
+		5EFC16A52AF8DBE800CBF2EE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFC16A32AF8DBE800CBF2EE /* ProfileViewController.xib */; };
+		5EFC16A72AF8DC7900CBF2EE /* ProfileNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFC16A62AF8DC7900CBF2EE /* ProfileNavigator.swift */; };
+		5EFC16A92AF8DC8100CBF2EE /* ProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFC16A82AF8DC8100CBF2EE /* ProfileUseCase.swift */; };
+		5EFC16AB2AF8DC8800CBF2EE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFC16AA2AF8DC8800CBF2EE /* ProfileViewModel.swift */; };
+		5EFC16B12AF8DF0F00CBF2EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFC16B02AF8DF0F00CBF2EE /* User.swift */; };
 		99F24233C5B94769DB1FDFB6 /* Pods_HustleChaser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7611B81927BADD84976A5914 /* Pods_HustleChaser.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E067C882AF135F500ED163E /* SavingsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsNavigator.swift; sourceTree = "<group>"; };
+		5E067C8A2AF1361E00ED163E /* SavingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsUseCase.swift; sourceTree = "<group>"; };
+		5E067C8C2AF1364A00ED163E /* SavingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewModel.swift; sourceTree = "<group>"; };
+		5E067C8E2AF137A200ED163E /* Savings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Savings+CoreDataClass.swift"; path = "/Users/hlinhxd/Desktop/Hustle-Chaser/HustleChaser/Data/Local/Savings+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		5E067C8F2AF137A200ED163E /* Savings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Savings+CoreDataProperties.swift"; path = "/Users/hlinhxd/Desktop/Hustle-Chaser/HustleChaser/Data/Local/Savings+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		5E1249C62AE7E0AC00019865 /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
 		5E1249C82AE7E0B600019865 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		5E1249CA2AE7E0C000019865 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -93,6 +116,11 @@
 		5E1249E32AE9557F00019865 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
 		5E1249E62AEA3C1F00019865 /* ExpenseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCollectionViewCell.swift; sourceTree = "<group>"; };
 		5E1249E72AEA3C1F00019865 /* ExpenseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpenseCollectionViewCell.xib; sourceTree = "<group>"; };
+		5E20FDE82AF3A7F600FA7572 /* NewSavingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSavingNavigator.swift; sourceTree = "<group>"; };
+		5E20FDEA2AF3A7FE00FA7572 /* NewSavingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSavingUseCase.swift; sourceTree = "<group>"; };
+		5E20FDEC2AF3A80600FA7572 /* NewSavingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSavingViewModel.swift; sourceTree = "<group>"; };
+		5E20FDF02AF3B0A500FA7572 /* NewSavingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSavingViewController.swift; sourceTree = "<group>"; };
+		5E20FDF12AF3B0A500FA7572 /* NewSavingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewSavingViewController.xib; sourceTree = "<group>"; };
 		5E5925072AEF812F0089F7B4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		5E654B412AEEA51900F4C7CD /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataRepository.swift; path = HustleChaser/Repository/CoreDataRepository.swift; sourceTree = SOURCE_ROOT; };
 		5E74F7C32AE0EB7F005AF7CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +175,14 @@
 		5ECFFB812AF126A800A74DC6 /* TransactionsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsNavigator.swift; sourceTree = "<group>"; };
 		5ECFFB832AF126B300A74DC6 /* TransactionsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsUseCase.swift; sourceTree = "<group>"; };
 		5ECFFB852AF126E900A74DC6 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		5ECFFB882AF1342000A74DC6 /* SavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewController.swift; sourceTree = "<group>"; };
+		5ECFFB892AF1342000A74DC6 /* SavingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavingsViewController.xib; sourceTree = "<group>"; };
+		5EFC16A22AF8DBE800CBF2EE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5EFC16A32AF8DBE800CBF2EE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		5EFC16A62AF8DC7900CBF2EE /* ProfileNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigator.swift; sourceTree = "<group>"; };
+		5EFC16A82AF8DC8100CBF2EE /* ProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUseCase.swift; sourceTree = "<group>"; };
+		5EFC16AA2AF8DC8800CBF2EE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		5EFC16B02AF8DF0F00CBF2EE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5FE5484C14B587CB595C4106 /* Pods-HustleChaser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HustleChaser.debug.xcconfig"; path = "Target Support Files/Pods-HustleChaser/Pods-HustleChaser.debug.xcconfig"; sourceTree = "<group>"; };
 		7611B81927BADD84976A5914 /* Pods_HustleChaser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HustleChaser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B7AF24FCAACF116AA4A9DF /* Pods-HustleChaser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HustleChaser.release.xcconfig"; path = "Target Support Files/Pods-HustleChaser/Pods-HustleChaser.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +240,18 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		5E20FDE12AF3A6C000FA7572 /* NewSaving */ = {
+			isa = PBXGroup;
+			children = (
+				5E20FDF02AF3B0A500FA7572 /* NewSavingViewController.swift */,
+				5E20FDF12AF3B0A500FA7572 /* NewSavingViewController.xib */,
+				5E20FDE82AF3A7F600FA7572 /* NewSavingNavigator.swift */,
+				5E20FDEA2AF3A7FE00FA7572 /* NewSavingUseCase.swift */,
+				5E20FDEC2AF3A80600FA7572 /* NewSavingViewModel.swift */,
+			);
+			path = NewSaving;
+			sourceTree = "<group>";
+		};
 		5E74F7BC2AE0E881005AF7CB /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +277,8 @@
 				5E1249CC2AE7E13000019865 /* Expense */,
 				5EB15F0E2AC1383700E9D871 /* Home */,
 				5ECFFB7C2AF1265D00A74DC6 /* Transactions */,
+				5EFC16A12AF8DBD400CBF2EE /* Profile */,
+				5ECFFB872AF1340800A74DC6 /* Savings */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -286,6 +336,8 @@
 		5E74F82E2AE7DD51005AF7CB /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				5E067C8E2AF137A200ED163E /* Savings+CoreDataClass.swift */,
+				5E067C8F2AF137A200ED163E /* Savings+CoreDataProperties.swift */,
 				5E819DB92AEEA427006F8AFF /* Expense+CoreDataClass.swift */,
 				5E819DBA2AEEA428006F8AFF /* Expense+CoreDataProperties.swift */,
 				5E74F8312AE7DDDF005AF7CB /* Person+CoreDataClass.swift */,
@@ -309,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				5E819DB72AEEA3AF006F8AFF /* NewExpense.swift */,
+				5EFC16B02AF8DF0F00CBF2EE /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -417,6 +470,31 @@
 			path = Transactions;
 			sourceTree = "<group>";
 		};
+		5ECFFB872AF1340800A74DC6 /* Savings */ = {
+			isa = PBXGroup;
+			children = (
+				5E20FDE12AF3A6C000FA7572 /* NewSaving */,
+				5ECFFB882AF1342000A74DC6 /* SavingsViewController.swift */,
+				5ECFFB892AF1342000A74DC6 /* SavingsViewController.xib */,
+				5E067C882AF135F500ED163E /* SavingsNavigator.swift */,
+				5E067C8A2AF1361E00ED163E /* SavingsUseCase.swift */,
+				5E067C8C2AF1364A00ED163E /* SavingsViewModel.swift */,
+			);
+			path = Savings;
+			sourceTree = "<group>";
+		};
+		5EFC16A12AF8DBD400CBF2EE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5EFC16A22AF8DBE800CBF2EE /* ProfileViewController.swift */,
+				5EFC16A32AF8DBE800CBF2EE /* ProfileViewController.xib */,
+				5EFC16A62AF8DC7900CBF2EE /* ProfileNavigator.swift */,
+				5EFC16A82AF8DC8100CBF2EE /* ProfileUseCase.swift */,
+				5EFC16AA2AF8DC8800CBF2EE /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		5EFFC9822AEEA78800FEB0C9 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +580,7 @@
 				5EB15F022AC1218900E9D871 /* Assets.xcassets in Resources */,
 				5EB15F222AC139F500E9D871 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				5ECFFB802AF1268900A74DC6 /* TransactionsViewController.xib in Resources */,
+				5ECFFB8B2AF1342000A74DC6 /* SavingsViewController.xib in Resources */,
 				5EB15F2B2AC139F500E9D871 /* PlusJakartaSans-BoldItalic.ttf in Resources */,
 				5EB15F272AC139F500E9D871 /* PlusJakartaSans-Medium.ttf in Resources */,
 				5EB15F282AC139F500E9D871 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */,
@@ -510,6 +589,7 @@
 				5E1249E92AEA3C1F00019865 /* ExpenseCollectionViewCell.xib in Resources */,
 				5EB15F292AC139F500E9D871 /* PlusJakartaSans-MediumItalic.ttf in Resources */,
 				5EB15F252AC139F500E9D871 /* PlusJakartaSans-SemiBold.ttf in Resources */,
+				5E20FDF32AF3B0A500FA7572 /* NewSavingViewController.xib in Resources */,
 				5EB15F262AC139F500E9D871 /* PlusJakartaSans-Regular.ttf in Resources */,
 				5E74F7CE2AE1320C005AF7CB /* SavingsCollectionViewCell.xib in Resources */,
 				5EB15F2F2AC139F500E9D871 /* PlusJakartaSans-ExtraLight.ttf in Resources */,
@@ -520,6 +600,7 @@
 				5EB15F232AC139F500E9D871 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */,
 				5EB15EFD2AC1218700E9D871 /* Main.storyboard in Resources */,
 				5E74F7C62AE0EB7F005AF7CB /* HomeViewController.xib in Resources */,
+				5EFC16A52AF8DBE800CBF2EE /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,10 +656,15 @@
 				5E1249DC2AE7E1E400019865 /* ViewModelType.swift in Sources */,
 				5E1249E22AE9557600019865 /* ExpenseUseCase.swift in Sources */,
 				5ECFFB742AEFF71100A74DC6 /* EarningsViewModel.swift in Sources */,
+				5E067C8D2AF1364A00ED163E /* SavingsViewModel.swift in Sources */,
 				5E74F7D92AE776AE005AF7CB /* Array+Extension.swift in Sources */,
 				5E1249D62AE7E1BB00019865 /* AppUseCase.swift in Sources */,
+				5E20FDF22AF3B0A500FA7572 /* NewSavingViewController.swift in Sources */,
+				5EFC16A92AF8DC8100CBF2EE /* ProfileUseCase.swift in Sources */,
 				5E74F7CD2AE1320C005AF7CB /* SavingsCollectionViewCell.swift in Sources */,
 				5ECFFB7F2AF1268900A74DC6 /* TransactionsViewController.swift in Sources */,
+				5E067C8B2AF1361E00ED163E /* SavingsUseCase.swift in Sources */,
+				5EFC16A42AF8DBE800CBF2EE /* ProfileViewController.swift in Sources */,
 				5ECFFB822AF126A800A74DC6 /* TransactionsNavigator.swift in Sources */,
 				5E74F8302AE7DD98005AF7CB /* CoreDataService.swift in Sources */,
 				5ECFFB7B2AF0B9E400A74DC6 /* Int+Extension.swift in Sources */,
@@ -587,11 +673,19 @@
 				5EB15F002AC1218700E9D871 /* HustleChaser.xcdatamodeld in Sources */,
 				5E1249C72AE7E0AC00019865 /* HomeNavigator.swift in Sources */,
 				5E74F7C92AE12B42005AF7CB /* EarningsCollectionViewCell.swift in Sources */,
+				5EFC16B12AF8DF0F00CBF2EE /* User.swift in Sources */,
+				5E20FDEB2AF3A7FE00FA7572 /* NewSavingUseCase.swift in Sources */,
 				5E654B422AEEA51900F4C7CD /* CoreDataRepository.swift in Sources */,
 				5E1249D02AE7E14500019865 /* ExpenseViewController.swift in Sources */,
+				5E067C902AF137A200ED163E /* Savings+CoreDataClass.swift in Sources */,
+				5EFC16A72AF8DC7900CBF2EE /* ProfileNavigator.swift in Sources */,
+				5E067C892AF135F500ED163E /* SavingsNavigator.swift in Sources */,
+				5E20FDED2AF3A80600FA7572 /* NewSavingViewModel.swift in Sources */,
 				5ECFFB6D2AEFF6A100A74DC6 /* EarningsViewController.swift in Sources */,
 				5EB15EF62AC1218700E9D871 /* AppDelegate.swift in Sources */,
+				5EFC16AB2AF8DC8800CBF2EE /* ProfileViewModel.swift in Sources */,
 				5ECFFB862AF126E900A74DC6 /* TransactionsViewModel.swift in Sources */,
+				5E067C912AF137A200ED163E /* Savings+CoreDataProperties.swift in Sources */,
 				5E819DBB2AEEA428006F8AFF /* Expense+CoreDataProperties.swift in Sources */,
 				5ECFFB722AEFF6F600A74DC6 /* EarningsUseCase.swift in Sources */,
 				5E819DB82AEEA3AF006F8AFF /* NewExpense.swift in Sources */,
@@ -603,11 +697,13 @@
 				5E74F7D32AE23582005AF7CB /* TransactionsTableViewCell.swift in Sources */,
 				5E819DBC2AEEA428006F8AFF /* Expense+CoreDataClass.swift in Sources */,
 				5E1249D42AE7E1B200019865 /* AppNavigator.swift in Sources */,
+				5E20FDE92AF3A7F600FA7572 /* NewSavingNavigator.swift in Sources */,
 				5ECFFB842AF126B300A74DC6 /* TransactionsUseCase.swift in Sources */,
 				5E1249C92AE7E0B600019865 /* HomeUseCase.swift in Sources */,
 				5E1249E82AEA3C1F00019865 /* ExpenseCollectionViewCell.swift in Sources */,
 				5E74F8342AE7DDDF005AF7CB /* Person+CoreDataClass.swift in Sources */,
 				5E74F7C52AE0EB7F005AF7CB /* HomeViewController.swift in Sources */,
+				5ECFFB8A2AF1342000A74DC6 /* SavingsViewController.swift in Sources */,
 				5E74F8372AE7DE35005AF7CB /* CoreDataErrorType.swift in Sources */,
 				5ECFFB782AF0ADE700A74DC6 /* EarningsTableViewCell.swift in Sources */,
 				5EB15F362AC17B3800E9D871 /* View+Extension.swift in Sources */,
