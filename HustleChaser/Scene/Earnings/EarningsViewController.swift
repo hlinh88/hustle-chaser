@@ -13,7 +13,6 @@ import Then
 
 final class EarningsViewController: UIViewController, BindableType {
     @IBOutlet private weak var backButton: UIImageView!
-    @IBOutlet private weak var clearButton: UIButton!
     @IBOutlet private weak var earningsTableView: UITableView!
 
     var viewModel: EarningsViewModel!
@@ -21,7 +20,8 @@ final class EarningsViewController: UIViewController, BindableType {
 
     private let loadTrigger = PublishSubject<Void>()
     private let backTrigger = PublishSubject<Void>()
-    private let deleteTrigger = PublishSubject<Void>()
+    private let deleteTrigger = PublishSubject<String>()
+    private var ids: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +45,6 @@ final class EarningsViewController: UIViewController, BindableType {
         loadTrigger.onNext(())
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-
     func bindViewModel() {
         let input = EarningsViewModel.Input(
             loadTrigger: loadTrigger.asDriver(onErrorDriveWith: .empty()),
@@ -62,6 +57,7 @@ final class EarningsViewController: UIViewController, BindableType {
         output.earnings
             .drive(earningsTableView.rx.items) { tableView, index, earning in
                 let indexPath = IndexPath(item: index, section: 0)
+                self.ids.append(earning.id)
                 let cell = tableView.dequeueReusableCell(for: indexPath, cellType: EarningsTableViewCell.self)
                 cell.configCell(thisEarnings: earning)
                 return cell
@@ -76,11 +72,6 @@ final class EarningsViewController: UIViewController, BindableType {
     @objc private func handleBackButton(_ sender: UITapGestureRecognizer) {
         backTrigger.onNext(())
     }
-
-    @IBAction private func handleClearButton(_ sender: UIButton) {
-        deleteTrigger.onNext(())
-        loadTrigger.onNext(())
-    }
 }
 
 extension EarningsViewController: UITableViewDelegate {
@@ -89,8 +80,10 @@ extension EarningsViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = UIContextualAction(style: .normal, title: Constants.emptyString) { (action, view, completionHandler) in
-            print("Delete: \(indexPath.row + 1)")
+        let delete = UIContextualAction(style: .normal, 
+                                        title: Constants.emptyString) { [unowned self] (action, view, completionHandler) in
+            self.deleteTrigger.onNext(self.ids[indexPath.row])
+            self.loadTrigger.onNext(())
             completionHandler(true)
         }.then {
             $0.image = UIImage(systemName: "trash")

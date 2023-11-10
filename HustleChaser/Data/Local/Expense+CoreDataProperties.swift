@@ -2,7 +2,7 @@
 //  Expense+CoreDataProperties.swift
 //  
 //
-//  Created by Hoang Linh Nguyen on 30/10/2023.
+//  Created by Hoang Linh Nguyen on 2/11/2023.
 //
 //
 
@@ -18,9 +18,10 @@ extension Expense {
 
     @NSManaged public var amount: Int64
     @NSManaged public var color: Int64
-    @NSManaged public var source: String?
-    @NSManaged public var type: Bool
     @NSManaged public var desc: String?
     @NSManaged public var logo: String?
+    @NSManaged public var source: String?
+    @NSManaged public var type: Bool
+    @NSManaged public var id: String?
 
 }

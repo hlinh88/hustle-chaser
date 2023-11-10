@@ -18,14 +18,17 @@ extension HomeViewModel: ViewModelType {
 
     struct Input {
         let loadTrigger: Driver<Void>
-        let selectProfileTrigger: Driver<Void>
+        let selectNewExpenseTrigger: Driver<Void>
         let seeAllEarningsTrigger: Driver<Void>
         let seeAllTransactionsTrigger: Driver<Void>
+        let seeAllSavingsTrigger: Driver<Void>
+        let profileTrigger: Driver<Void>
     }
 
     struct Output {
         let earnings: Driver<[NewExpense]>
         let transactions: Driver<[NewExpense]>
+        let user: Driver<User>
     }
 
     func transform(_ input: HomeViewModel.Input, disposeBag: DisposeBag) -> HomeViewModel.Output {
@@ -36,7 +39,15 @@ extension HomeViewModel: ViewModelType {
                     .asDriver(onErrorJustReturn: [])
             }
 
-        input.selectProfileTrigger
+        let user = input.loadTrigger
+            .flatMapLatest {
+                return self.useCase.getUser()
+                    .asDriver(onErrorJustReturn: User(id: "currentUser",
+                                                      balance: 0,
+                                                      name: Constants.emptyString))
+            }
+
+        input.selectNewExpenseTrigger
             .drive(onNext: { _ in
                 self.navigator.goToNewExpense()
             })
@@ -55,12 +66,24 @@ extension HomeViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
 
+        input.seeAllSavingsTrigger
+            .drive(onNext: { _ in
+                self.navigator.goToSavings()
+            })
+            .disposed(by: disposeBag)
+
+        input.profileTrigger
+            .drive(onNext: { _ in
+                self.navigator.goToProfile()
+            })
+            .disposed(by: disposeBag)
+
         let transactions = input.loadTrigger
             .flatMapLatest {
                 return self.useCase.getExpenses(type: false)
                     .asDriver(onErrorJustReturn: [])
             }
 
-        return Output(earnings: earnings, transactions: transactions)
+        return Output(earnings: earnings, transactions: transactions, user: user)
     }
 }

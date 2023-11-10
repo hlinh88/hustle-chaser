@@ -11,12 +11,17 @@ import RxCocoa
 
 protocol EarningsUseCaseType {
     func getExpenses(type: Bool) -> Observable<[NewExpense]>
+    func deleteExpenseWithId(id: String) -> Observable<Void>
     func deleteExpenses() -> Observable<Void>
 }
 
 struct EarningsUseCase: EarningsUseCaseType {
     func getExpenses(type: Bool) -> Observable<[NewExpense]> {
         return CoreDataRepository().getExpenses(type: type)
+    }
+
+    func deleteExpenseWithId(id: String) -> Observable<Void> {
+        return CoreDataRepository().deleteExpenseWithId(id: id)
     }
 
     func deleteExpenses() -> Observable<Void> {

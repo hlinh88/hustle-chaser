@@ -18,7 +18,7 @@ extension EarningsViewModel: ViewModelType {
     struct Input {
         let loadTrigger: Driver<Void>
         let backTrigger: Driver<Void>
-        let deleteTrigger: Driver<Void>
+        let deleteTrigger: Driver<String>
     }
 
     struct Output {
@@ -38,8 +38,8 @@ extension EarningsViewModel: ViewModelType {
             }
 
         let delete = input.deleteTrigger
-            .flatMapLatest {
-                return self.useCase.deleteExpenses()
+            .flatMapLatest { id in
+                return self.useCase.deleteExpenseWithId(id: id)
                     .asDriver(onErrorJustReturn: ())
             }
 

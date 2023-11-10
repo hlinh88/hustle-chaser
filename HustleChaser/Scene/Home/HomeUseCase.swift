@@ -11,7 +11,7 @@ import RxCocoa
 
 protocol HomeUseCaseType {
     func getExpenses(type: Bool) -> Observable<[NewExpense]>
-    func deleteExpenses() -> Observable<Void>
+    func getUser() -> Observable<User>
 }
 
 struct HomeUseCase: HomeUseCaseType {
@@ -19,7 +19,7 @@ struct HomeUseCase: HomeUseCaseType {
         return CoreDataRepository().getExpenses(type: type)
     }
 
-    func deleteExpenses() -> Observable<Void> {
-        return CoreDataRepository().deleteExpenses()
+    func getUser() -> Observable<User> {
+        return CoreDataRepository().getUser()
     }
 }
