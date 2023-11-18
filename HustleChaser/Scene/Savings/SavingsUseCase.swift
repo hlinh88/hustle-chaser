@@ -10,9 +10,11 @@ import RxSwift
 import RxCocoa
 
 protocol SavingsUseCaseType {
-
+    func getSavings() -> Observable<[NewSaving]>
 }
 
 struct SavingsUseCase: SavingsUseCaseType {
-    
+    func getSavings() -> Observable<[NewSaving]> {
+        return CoreDataRepository().getSavings()
+    }
 }

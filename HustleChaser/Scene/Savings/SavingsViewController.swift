@@ -13,7 +13,8 @@ import Then
 
 final class SavingsViewController: UIViewController, BindableType {
     @IBOutlet private weak var backButton: UIImageView!
-
+    @IBOutlet weak var savingsTableView: UITableView!
+    
     var viewModel: SavingsViewModel!
     private let disposeBag = DisposeBag()
 
@@ -28,11 +29,14 @@ final class SavingsViewController: UIViewController, BindableType {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadTrigger.onNext(())
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     private func configView() {
         self.do {
+            $0.savingsTableView.register(cellType: SavingsTableViewCell.self)
+            $0.savingsTableView.rowHeight = 200
             let backButtonTap = UITapGestureRecognizer(target: self, action: #selector(self.handleBackButton(_:)))
             $0.backButton.isUserInteractionEnabled = true
             $0.backButton.addGestureRecognizer(backButtonTap)
@@ -47,6 +51,15 @@ final class SavingsViewController: UIViewController, BindableType {
         )
 
         let output = viewModel.transform(input, disposeBag: disposeBag)
+
+        output.savings
+            .drive(savingsTableView.rx.items) { tableView, index, saving in
+                let indexPath = IndexPath(item: index, section: 0)
+                let cell = tableView.dequeueReusableCell(for: indexPath, cellType: SavingsTableViewCell.self)
+                cell.configCell(thisSaving: saving)
+                return cell
+            }
+            .disposed(by: disposeBag)
 
     }
 

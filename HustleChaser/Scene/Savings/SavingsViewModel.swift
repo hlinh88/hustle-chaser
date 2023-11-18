@@ -22,7 +22,7 @@ extension SavingsViewModel: ViewModelType {
     }
 
     struct Output {
-
+        let savings: Driver<[NewSaving]>
     }
 
     func transform(_ input: SavingsViewModel.Input, disposeBag: DisposeBag) -> SavingsViewModel.Output {
@@ -30,10 +30,16 @@ extension SavingsViewModel: ViewModelType {
             .drive(onNext: navigator.backToHome)
             .disposed(by: disposeBag)
 
+        let savings = input.loadTrigger
+            .flatMapLatest {
+                return self.useCase.getSavings()
+                    .asDriver(onErrorJustReturn: [])
+            }
+
         input.newSavingTrigger
             .drive(onNext: navigator.goToNewSaving)
             .disposed(by: disposeBag)
 
-        return Output()
+        return Output(savings: savings)
     }
 }

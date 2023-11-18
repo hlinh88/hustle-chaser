@@ -181,4 +181,46 @@ final class CoreDataService {
         }
     }
 
+    func getSavings() -> Observable<[NewSaving]> {
+        let context = persistentContainer.viewContext
+        let request = Savings.fetchRequest()
+        return Observable.create { observer in
+            do {
+                let savingEntity = try context.fetch(request)
+                var savings: [NewSaving] = []
+                _ = savingEntity.map { saving in
+                    savings.append(NewSaving(name: saving.name ?? "",
+                                             current: Int(saving.current),
+                                             target: Int(saving.target),
+                                             days: Int(saving.days)))
+                }
+                observer.onNext(savings)
+                observer.onCompleted()
+            } catch {
+                observer.onError(CoreDataErrorType.getSavingsFailed)
+            }
+            return Disposables.create()
+        }
+    }
+
+    func saveSaving(thisSaving: NewSaving) -> Observable<Void> {
+        let context = persistentContainer.viewContext
+        return Observable.create { observer in
+            do {
+                Savings(context: context).do {
+                    $0.name = thisSaving.name
+                    $0.current = Int64(thisSaving.current)
+                    $0.target = Int64(thisSaving.target)
+                    $0.days = Int64(thisSaving.days)
+                }
+                try context.save()
+                observer.onNext(())
+                observer.onCompleted()
+            } catch {
+                observer.onError(CoreDataErrorType.saveSavingFailed)
+            }
+            return Disposables.create()
+        }
+    }
+
 }

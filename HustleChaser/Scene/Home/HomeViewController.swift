@@ -50,7 +50,6 @@ final class HomeViewController: UIViewController, BindableType {
         self.do {
             $0.earningsCollectionView.register(cellType: EarningsCollectionViewCell.self)
             $0.savingsCollectionView.register(cellType: SavingsCollectionViewCell.self)
-            $0.savingsCollectionView.dataSource = self
             $0.savingsCollectionView.delegate = self
             $0.transactionsTableView.register(cellType: TransactionsTableViewCell.self)
             $0.transactionsTableView.rowHeight = 80
@@ -92,6 +91,15 @@ final class HomeViewController: UIViewController, BindableType {
                 let indexPath = IndexPath(item: index, section: 0)
                 let cell = tableView.dequeueReusableCell(for: indexPath, cellType: TransactionsTableViewCell.self)
                 cell.configCell(thisTransaction: transaction)
+                return cell
+            }
+            .disposed(by: disposeBag)
+
+        output.savings
+            .drive(savingsCollectionView.rx.items) { collectionView, row, saving in
+                let indexPath = IndexPath(row: row, section: 0)
+                let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: SavingsCollectionViewCell.self)
+                cell.configCell(thisSaving: saving)
                 return cell
             }
             .disposed(by: disposeBag)
@@ -160,19 +168,6 @@ extension HomeViewController {
                 $0.balanceLabel.text = "VND \(user.balance.delimiter)"
             }
         }
-    }
-}
-
-
-extension HomeViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: SavingsCollectionViewCell.self)
-        return cell
-
     }
 }
 

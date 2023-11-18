@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavingsViewController" customModule="HustleChaser" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="xVB-XR-1IR" id="XH7-kG-In3"/>
+                <outlet property="savingsTableView" destination="1Ae-5b-Md2" id="Syy-Su-xlh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

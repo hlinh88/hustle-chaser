@@ -15,4 +15,6 @@ enum CoreDataErrorType: Error {
     case deleteExpenseWithIdFailed
     case deleteExpensesFailed
     case checkExistFailed
+    case getSavingsFailed
+    case saveSavingFailed
 }

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PlusJakartaSans-Bold.ttf">
+            <string>PlusJakartaSans-Bold</string>
+        </array>
+        <array key="PlusJakartaSans-Medium.ttf">
+            <string>PlusJakartaSans-Medium</string>
+        </array>
+        <array key="PlusJakartaSans-SemiBold.ttf">
+            <string>PlusJakartaSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewSavingViewController" customModule="HustleChaser" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="26z-eP-Roe" id="4IY-CB-0gR"/>
+                <outlet property="currentAmountTextField" destination="VRC-EK-JnS" id="RS7-e4-7fX"/>
+                <outlet property="daysTextField" destination="Rmx-HN-Ip7" id="jF9-ei-9Y2"/>
+                <outlet property="nameTextField" destination="IDy-pb-umt" id="Dmt-xc-Fql"/>
+                <outlet property="targetAmountTextField" destination="obU-EK-xeZ" id="fw7-kY-WZY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhj-5H-3YV">
+                    <rect key="frame" x="0.0" y="59" width="393" height="80"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="26z-eP-Roe">
+                            <rect key="frame" x="15" y="27" width="30" height="26.333333333333329"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="26z-eP-Roe" secondAttribute="height" multiplier="1:1" id="fGn-6q-fH6"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Saving" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO3-Tb-krG">
+                            <rect key="frame" x="125.33333333333333" y="24.333333333333329" width="142.33333333333337" height="31.666666666666671"/>
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-Bold" family="Plus Jakarta Sans" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBW-Ls-qr1">
+                            <rect key="frame" x="340" y="23.666666666666671" width="38" height="33"/>
+                            <fontDescription key="fontDescription" name="PlusJakartaSans-SemiBold" family="Plus Jakarta Sans" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Save">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="handleSaveButton:" destination="-1" eventType="touchUpInside" id="bcv-Jc-V1S"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="xO3-Tb-krG" firstAttribute="centerY" secondItem="qhj-5H-3YV" secondAttribute="centerY" id="6yB-Wa-XKy"/>
+                        <constraint firstItem="26z-eP-Roe" firstAttribute="leading" secondItem="qhj-5H-3YV" secondAttribute="leading" constant="15" id="7Bw-Lz-SQ3"/>
+                        <constraint firstItem="xO3-Tb-krG" firstAttribute="centerX" secondItem="qhj-5H-3YV" secondAttribute="centerX" id="JNh-nH-7ba"/>
+                        <constraint firstItem="26z-eP-Roe" firstAttribute="centerY" secondItem="qhj-5H-3YV" secondAttribute="centerY" id="K7P-EH-VPk"/>
+                        <constraint firstAttribute="height" constant="80" id="WCt-Mq-meb"/>
+                        <constraint firstAttribute="trailing" secondItem="UBW-Ls-qr1" secondAttribute="trailing" constant="15" id="kBX-BK-j1V"/>
+                        <constraint firstItem="UBW-Ls-qr1" firstAttribute="centerY" secondItem="qhj-5H-3YV" secondAttribute="centerY" id="mTR-LU-BgZ"/>
+                        <constraint firstItem="26z-eP-Roe" firstAttribute="top" secondItem="qhj-5H-3YV" secondAttribute="top" constant="25" id="yty-RR-SGi"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDy-pb-umt">
+                    <rect key="frame" x="15" y="159" width="363" height="50"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="dDx-g6-dhB"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VRC-EK-JnS">
+                    <rect key="frame" x="15" y="229" width="363" height="50"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="PQN-v5-yxm"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Target Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="obU-EK-xeZ">
+                    <rect key="frame" x="15" y="299" width="363" height="50"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="I8L-pA-iSI"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Days left" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rmx-HN-Ip7">
+                    <rect key="frame" x="15" y="369" width="363" height="50"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="l2H-Dg-l7N"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="PlusJakartaSans-Medium" family="Plus Jakarta Sans" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="obU-EK-xeZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="0Cd-c8-Bov"/>
+                <constraint firstItem="qhj-5H-3YV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0r3-TA-DWI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VRC-EK-JnS" secondAttribute="trailing" constant="15" id="3It-aF-oA9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IDy-pb-umt" secondAttribute="trailing" constant="15" id="Bei-pv-Wyr"/>
+                <constraint firstItem="VRC-EK-JnS" firstAttribute="top" secondItem="IDy-pb-umt" secondAttribute="bottom" constant="20" id="Cz8-po-dSY"/>
+                <constraint firstItem="IDy-pb-umt" firstAttribute="top" secondItem="qhj-5H-3YV" secondAttribute="bottom" constant="20" id="GIm-Px-CKi"/>
+                <constraint firstItem="Rmx-HN-Ip7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="HVZ-uH-6GT"/>
+                <constraint firstItem="IDy-pb-umt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="No2-EK-FQ7"/>
+                <constraint firstItem="Rmx-HN-Ip7" firstAttribute="top" secondItem="obU-EK-xeZ" secondAttribute="bottom" constant="20" id="Pdm-IQ-aVr"/>
+                <constraint firstAttribute="trailing" secondItem="qhj-5H-3YV" secondAttribute="trailing" id="PvD-58-xM5"/>
+                <constraint firstItem="obU-EK-xeZ" firstAttribute="top" secondItem="VRC-EK-JnS" secondAttribute="bottom" constant="20" id="TMW-FT-ch9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rmx-HN-Ip7" secondAttribute="trailing" constant="15" id="Z2G-jk-zIK"/>
+                <constraint firstItem="qhj-5H-3YV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fcc-YE-G6K"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="obU-EK-xeZ" secondAttribute="trailing" constant="15" id="oqJ-mb-Jsy"/>
+                <constraint firstItem="VRC-EK-JnS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="pnB-sp-1qU"/>
+            </constraints>
+            <point key="canvasLocation" x="65" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

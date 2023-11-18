@@ -15,6 +15,8 @@ protocol CoreDataRepositoryType {
     func deleteExpenses() -> Observable<Void>
     func saveUser(thisUser: User) -> Observable<Void>
     func getUser() -> Observable<User>
+    func getSavings() -> Observable<[NewSaving]>
+    func saveSaving(thisSaving: NewSaving) -> Observable<Void>
 }
 
 struct CoreDataRepository: CoreDataRepositoryType {
@@ -40,5 +42,13 @@ struct CoreDataRepository: CoreDataRepositoryType {
 
     func getUser() -> Observable<User> {
         return CoreDataService.shared.getUser()
+    }
+
+    func getSavings() -> Observable<[NewSaving]> {
+        return CoreDataService.shared.getSavings()
+    }
+
+    func saveSaving(thisSaving: NewSaving) -> Observable<Void> {
+        return CoreDataService.shared.saveSaving(thisSaving: thisSaving)
     }
 }

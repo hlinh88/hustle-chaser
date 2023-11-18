@@ -12,6 +12,7 @@ import RxCocoa
 protocol HomeUseCaseType {
     func getExpenses(type: Bool) -> Observable<[NewExpense]>
     func getUser() -> Observable<User>
+    func getSavings() -> Observable<[NewSaving]>
 }
 
 struct HomeUseCase: HomeUseCaseType {
@@ -21,5 +22,9 @@ struct HomeUseCase: HomeUseCaseType {
 
     func getUser() -> Observable<User> {
         return CoreDataRepository().getUser()
+    }
+
+    func getSavings() -> Observable<[NewSaving]> {
+        return CoreDataRepository().getSavings()
     }
 }

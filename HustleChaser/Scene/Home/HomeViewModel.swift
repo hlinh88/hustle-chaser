@@ -29,6 +29,7 @@ extension HomeViewModel: ViewModelType {
         let earnings: Driver<[NewExpense]>
         let transactions: Driver<[NewExpense]>
         let user: Driver<User>
+        let savings: Driver<[NewSaving]>
     }
 
     func transform(_ input: HomeViewModel.Input, disposeBag: DisposeBag) -> HomeViewModel.Output {
@@ -45,6 +46,12 @@ extension HomeViewModel: ViewModelType {
                     .asDriver(onErrorJustReturn: User(id: "currentUser",
                                                       balance: 0,
                                                       name: Constants.emptyString))
+            }
+
+        let savings = input.loadTrigger
+            .flatMapLatest {
+                return self.useCase.getSavings()
+                    .asDriver(onErrorJustReturn: [])
             }
 
         input.selectNewExpenseTrigger
@@ -84,6 +91,9 @@ extension HomeViewModel: ViewModelType {
                     .asDriver(onErrorJustReturn: [])
             }
 
-        return Output(earnings: earnings, transactions: transactions, user: user)
+        return Output(earnings: earnings,
+                      transactions: transactions,
+                      user: user,
+                      savings: savings)
     }
 }

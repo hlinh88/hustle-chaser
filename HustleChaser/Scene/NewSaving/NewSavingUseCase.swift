@@ -10,9 +10,11 @@ import RxSwift
 import RxCocoa
 
 protocol NewSavingUseCaseType {
-    
+    func saveSaving(thisSaving: NewSaving) -> Observable<Void>
 }
 
 struct NewSavingUseCase: NewSavingUseCaseType {
-
+    func saveSaving(thisSaving: NewSaving) -> Observable<Void> {
+        return CoreDataRepository().saveSaving(thisSaving: thisSaving)
+    }
 }

@@ -86,6 +86,9 @@
 		5ECFFB862AF126E900A74DC6 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB852AF126E900A74DC6 /* TransactionsViewModel.swift */; };
 		5ECFFB8A2AF1342000A74DC6 /* SavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECFFB882AF1342000A74DC6 /* SavingsViewController.swift */; };
 		5ECFFB8B2AF1342000A74DC6 /* SavingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ECFFB892AF1342000A74DC6 /* SavingsViewController.xib */; };
+		5EEEAE082B089B4600430CDC /* NewSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEEAE072B089B4600430CDC /* NewSaving.swift */; };
+		5EEEAE0C2B089FC900430CDC /* SavingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEEAE0A2B089FC900430CDC /* SavingsTableViewCell.swift */; };
+		5EEEAE0D2B089FC900430CDC /* SavingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EEEAE0B2B089FC900430CDC /* SavingsTableViewCell.xib */; };
 		5EFC16A42AF8DBE800CBF2EE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFC16A22AF8DBE800CBF2EE /* ProfileViewController.swift */; };
 		5EFC16A52AF8DBE800CBF2EE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFC16A32AF8DBE800CBF2EE /* ProfileViewController.xib */; };
 		5EFC16A72AF8DC7900CBF2EE /* ProfileNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFC16A62AF8DC7900CBF2EE /* ProfileNavigator.swift */; };
@@ -177,6 +180,9 @@
 		5ECFFB852AF126E900A74DC6 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
 		5ECFFB882AF1342000A74DC6 /* SavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsViewController.swift; sourceTree = "<group>"; };
 		5ECFFB892AF1342000A74DC6 /* SavingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavingsViewController.xib; sourceTree = "<group>"; };
+		5EEEAE072B089B4600430CDC /* NewSaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSaving.swift; sourceTree = "<group>"; };
+		5EEEAE0A2B089FC900430CDC /* SavingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsTableViewCell.swift; sourceTree = "<group>"; };
+		5EEEAE0B2B089FC900430CDC /* SavingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavingsTableViewCell.xib; sourceTree = "<group>"; };
 		5EFC16A22AF8DBE800CBF2EE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5EFC16A32AF8DBE800CBF2EE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		5EFC16A62AF8DC7900CBF2EE /* ProfileNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigator.swift; sourceTree = "<group>"; };
@@ -279,6 +285,7 @@
 				5ECFFB7C2AF1265D00A74DC6 /* Transactions */,
 				5EFC16A12AF8DBD400CBF2EE /* Profile */,
 				5ECFFB872AF1340800A74DC6 /* Savings */,
+				5E20FDE12AF3A6C000FA7572 /* NewSaving */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -362,6 +369,7 @@
 			children = (
 				5E819DB72AEEA3AF006F8AFF /* NewExpense.swift */,
 				5EFC16B02AF8DF0F00CBF2EE /* User.swift */,
+				5EEEAE072B089B4600430CDC /* NewSaving.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -473,7 +481,7 @@
 		5ECFFB872AF1340800A74DC6 /* Savings */ = {
 			isa = PBXGroup;
 			children = (
-				5E20FDE12AF3A6C000FA7572 /* NewSaving */,
+				5EEEAE092B089F7B00430CDC /* Cell */,
 				5ECFFB882AF1342000A74DC6 /* SavingsViewController.swift */,
 				5ECFFB892AF1342000A74DC6 /* SavingsViewController.xib */,
 				5E067C882AF135F500ED163E /* SavingsNavigator.swift */,
@@ -481,6 +489,15 @@
 				5E067C8C2AF1364A00ED163E /* SavingsViewModel.swift */,
 			);
 			path = Savings;
+			sourceTree = "<group>";
+		};
+		5EEEAE092B089F7B00430CDC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5EEEAE0A2B089FC900430CDC /* SavingsTableViewCell.swift */,
+				5EEEAE0B2B089FC900430CDC /* SavingsTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		5EFC16A12AF8DBD400CBF2EE /* Profile */ = {
@@ -587,6 +604,7 @@
 				5ECFFB792AF0ADE700A74DC6 /* EarningsTableViewCell.xib in Resources */,
 				5E74F7CA2AE12B42005AF7CB /* EarningsCollectionViewCell.xib in Resources */,
 				5E1249E92AEA3C1F00019865 /* ExpenseCollectionViewCell.xib in Resources */,
+				5EEEAE0D2B089FC900430CDC /* SavingsTableViewCell.xib in Resources */,
 				5EB15F292AC139F500E9D871 /* PlusJakartaSans-MediumItalic.ttf in Resources */,
 				5EB15F252AC139F500E9D871 /* PlusJakartaSans-SemiBold.ttf in Resources */,
 				5E20FDF32AF3B0A500FA7572 /* NewSavingViewController.xib in Resources */,
@@ -664,6 +682,7 @@
 				5E74F7CD2AE1320C005AF7CB /* SavingsCollectionViewCell.swift in Sources */,
 				5ECFFB7F2AF1268900A74DC6 /* TransactionsViewController.swift in Sources */,
 				5E067C8B2AF1361E00ED163E /* SavingsUseCase.swift in Sources */,
+				5EEEAE0C2B089FC900430CDC /* SavingsTableViewCell.swift in Sources */,
 				5EFC16A42AF8DBE800CBF2EE /* ProfileViewController.swift in Sources */,
 				5ECFFB822AF126A800A74DC6 /* TransactionsNavigator.swift in Sources */,
 				5E74F8302AE7DD98005AF7CB /* CoreDataService.swift in Sources */,
@@ -696,6 +715,7 @@
 				5E74F7D02AE234A1005AF7CB /* Constants.swift in Sources */,
 				5E74F7D32AE23582005AF7CB /* TransactionsTableViewCell.swift in Sources */,
 				5E819DBC2AEEA428006F8AFF /* Expense+CoreDataClass.swift in Sources */,
+				5EEEAE082B089B4600430CDC /* NewSaving.swift in Sources */,
 				5E1249D42AE7E1B200019865 /* AppNavigator.swift in Sources */,
 				5E20FDE92AF3A7F600FA7572 /* NewSavingNavigator.swift in Sources */,
 				5ECFFB842AF126B300A74DC6 /* TransactionsUseCase.swift in Sources */,
