@@ -34,6 +34,8 @@ extension HomeViewModel: ViewModelType {
 
     func transform(_ input: HomeViewModel.Input, disposeBag: DisposeBag) -> HomeViewModel.Output {
 
+        let savings = BehaviorRelay<[NewSaving]>(value: [])
+
         let earnings = input.loadTrigger
             .flatMapLatest {
                 return self.useCase.getExpenses(type: true)
@@ -48,11 +50,20 @@ extension HomeViewModel: ViewModelType {
                                                       name: Constants.emptyString))
             }
 
-        let savings = input.loadTrigger
+        input.loadTrigger
             .flatMapLatest {
                 return self.useCase.getSavings()
                     .asDriver(onErrorJustReturn: [])
             }
+            .drive(onNext: { saving in
+                if saving.count >= 4 {
+                    for index in 0..<4 {
+                        savings.accept(savings.value + [saving[index]])
+                    }
+                }
+            })
+            .disposed(by: disposeBag)
+
 
         input.selectNewExpenseTrigger
             .drive(onNext: { _ in
@@ -94,6 +105,6 @@ extension HomeViewModel: ViewModelType {
         return Output(earnings: earnings,
                       transactions: transactions,
                       user: user,
-                      savings: savings)
+                      savings: savings.asDriver())
     }
 }
